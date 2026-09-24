@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2e9">
+  <meta name="description" content="Comprendre CRISPR-Cas9 : mécanisme, applications, limites et actualités scientifiques expliqués clairement.">
+  <title>CRISPR·CAS9 — Comprendre l’édition du vivant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f4f2e9;--ink:#192c25;--forest:#173c31;--forest2:#214d3e;--lime:#c9e96b;--muted:#69766e;--line:#d7dbcf;--white:#fffef9;--mono:'DM Mono',monospace;--sans:'Manrope',sans-serif;--serif:'Newsreader',serif}
+
+    *{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.skip{position:fixed;left:12px;top:-80px;background:var(--lime);padding:12px 16px;z-index:10}
+.skip:focus{top:12px}
+a:focus-visible,button:focus-visible{outline:3px solid #7a9d26;outline-offset:4px}
+.wrap{width:min(1280px,calc(100% - 64px));margin:auto}
+.topline{height:34px;background:var(--forest);color:#dce7d9;display:flex;align-items:center;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.topline .wrap{display:flex;justify-content:space-between;gap:16px}
+.topline b{color:var(--lime);font-weight:500}
+.nav{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:700;letter-spacing:.08em}
+.brandmark{width:31px;height:31px;border:1px solid var(--forest);border-radius:50%;position:relative}
+.brandmark:before,.brandmark:after{content:'';position:absolute;width:13px;height:19px;border:1px solid var(--forest);border-radius:50%;left:8px;top:5px;transform:rotate(38deg)}
+.brandmark:after{transform:rotate(-38deg);border-color:#8ba94b}
+.navlinks{display:flex;align-items:center;gap:34px;font-size:12px;color:#53645a}
+.navlinks a:hover{color:var(--forest)}
+.navcta{padding:12px 16px;border:1px solid var(--forest);font-size:11px;font-weight:700;transition:.2s}
+.navcta:hover{background:var(--forest);color:var(--white)}
+.hero{padding:72px 0 80px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:46px}
+.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;font:10px var(--mono);letter-spacing:.12em;color:#5f715f}
+.eyebrow:before{content:'';width:24px;height:1px;background:#8a9c70}
+.hero h1{font:500 clamp(54px,7vw,94px)/.91 var(--serif);letter-spacing:-.055em;margin:26px 0 23px;max-width:650px}
+.hero h1 em{font-weight:400;color:#6a8438}
+.hero-copy{font-size:15px;line-height:1.85;color:#5f6d64;max-width:480px}
+.hero-actions{display:flex;gap:12px;align-items:center;margin-top:30px}
+.btn{min-height:48px;padding:0 19px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:1px solid var(--forest);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--forest);color:var(--white)}
+.btn.primary:hover{background:var(--forest2)}
+.btn.secondary{color:var(--forest)}
+.btn.secondary:hover{background:#e7e9dd}
+.hero-note{font:10px var(--mono);color:#849087;margin-top:22px}
+.scene-wrap{height:490px;position:relative;background:#173c31;overflow:hidden}
+.scene-wrap:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 32%,rgba(13,36,29,.32));pointer-events:none}
+.scene-label{position:absolute;z-index:2;color:#e8f0dd;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;left:22px;top:22px}
+.scene-axis{position:absolute;z-index:2;right:22px;bottom:20px;color:#b4c5a9;font:9px var(--mono);letter-spacing:.1em}
+.scene-axis span{color:var(--lime)}
+#molecule{width:100%;height:100%;display:block}
+.fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#c9e96b;font:13px var(--mono)}
+.proofline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.proofline span{font:10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#6a776c}
+.proofline strong{font:500 15px var(--serif);color:var(--forest)}
+.section{padding:104px 0}
+.section-kicker{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#71806c}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin:17px 0 48px}
+.section h2{font:500 clamp(38px,5vw,62px)/1 var(--serif);letter-spacing:-.045em;margin:0;max-width:650px}
+.section-intro{max-width:350px;font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.step{padding:21px 22px 0 0;min-height:220px;border-right:1px solid var(--line)}
+.step+.step{padding-left:22px}
+.step:last-child{border-right:0}
+.step-number{font:11px var(--mono);color:#7b8d65}
+.step h3{font:500 24px/1.15 var(--serif);margin:44px 0 12px}
+.step p{font-size:11px;line-height:1.8;color:#66746a;max-width:230px}
+.step b{color:var(--forest);font-weight:700}
+.dark-section{background:var(--forest);color:#f3f4ea}
+.dark-section .section-kicker{color:#b5cd79}
+.dark-section .section-intro{color:#c0cdc1}
+.mechanism{display:grid;grid-template-columns:.92fr 1.08fr;gap:80px;align-items:center}
+.mechanism h2{max-width:480px}
+.mechanism p{font-size:13px;line-height:1.9;color:#cad4c8}
+.mechanism-list{margin-top:30px;border-top:1px solid #476156}
+.mechanism-row{display:grid;grid-template-columns:35px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid #476156;font-size:11px;line-height:1.65;color:#d5dfd2}
+.mechanism-row .n{font:10px var(--mono);color:var(--lime)}
+.mechanism-art{min-height:390px;position:relative;border:1px solid #496457;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at center,#285341 0%,#173c31 62%)}
+.cut-line{position:absolute;width:75%;height:1px;background:#bed66e;top:50%;transform:rotate(-19deg);box-shadow:0 0 22px #c9e96b}
+.cut-line:before,.cut-line:after{content:'';position:absolute;width:9px;height:9px;border:1px solid var(--lime);border-radius:50%;top:-4px}
+.cut-line:before{left:38%}
+.cut-line:after{left:60%}
+.sequence{position:absolute;display:flex;gap:11px;flex-wrap:wrap;justify-content:center;width:78%;font:11px var(--mono);color:#d9e5d0;letter-spacing:.2em}
+.sequence span:nth-child(4n+1){color:var(--lime)}
+.sequence.top{top:30%}
+.sequence.bottom{bottom:30%}
+.art-caption{position:absolute;bottom:18px;left:18px;font:9px var(--mono);color:#b9cbb5;letter-spacing:.08em;text-transform:uppercase}
+.applications{padding:94px 0 104px}
+.application-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:start}
+.application-lead{font:500 35px/1.17 var(--serif);max-width:500px;margin:25px 0 20px}
+.application-copy{max-width:490px;color:var(--muted);font-size:12px;line-height:1.9}
+.applications-list{border-top:1px solid var(--line)}
+.app-row{display:grid;grid-template-columns:42px 1fr 18px;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.app-row .n{font:10px var(--mono);color:#7e9258}
+.app-row strong{font:500 20px var(--serif)}
+.app-row small{display:block;font:10px var(--sans);color:var(--muted);margin-top:4px}
+.app-row .arrow{color:#829356;font-size:17px}
+.caution{margin-top:23px;padding:15px 17px;background:#e8eadd;font-size:10px;line-height:1.75;color:#5e6b5f}
+.blog-section{background:#e9eadd;padding:100px 0}
+.blog-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
+.blog-top h2{max-width:610px}
+.blog-top .btn{white-space:nowrap}
+.blog-meta{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#77836d}
+.blog-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:15px}
+.article{background:var(--paper);padding:23px;min-height:247px;display:flex;flex-direction:column;transition:transform .2s}
+.article:hover{transform:translateY(-3px)}
+.article.feature{background:var(--forest);color:var(--white);min-height:270px}
+.article-type{font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#869366}
+.feature .article-type{color:var(--lime)}
+.article h3{font:500 26px/1.1 var(--serif);margin:38px 0 12px}
+.article:not(.feature) h3{font-size:22px}
+.article p{font-size:10px;line-height:1.7;color:#69766e;margin:0}
+.feature p{color:#c7d2c6}
+.read-more{margin-top:auto;padding-top:23px;font:9px var(--mono);letter-spacing:.06em;color:#819257}
+.feature .read-more{color:var(--lime)}
+.editorial-note{font-size:10px;color:#727f70;margin-top:18px}
+.workflow{padding:100px 0}
+.workflow-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:72px}
+.workflow h2{margin-top:15px}
+.workflow-intro{font-size:12px;line-height:1.9;color:var(--muted);max-width:400px}
+.workflow-flow{border-top:1px solid var(--line)}
+.flow-row{display:grid;grid-template-columns:52px 1fr 120px;gap:16px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.flow-num{font:10px var(--mono);color:#809153}
+.flow-text strong{font:500 17px var(--serif)}
+.flow-text small{display:block;font-size:10px;color:#718074;margin-top:4px}
+.flow-badge{justify-self:end;font:8px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border:1px solid #ccd2c1;color:#68765f}
+.flow-badge.human{background:var(--lime);border-color:var(--lime);color:#263923}
+.footer{background:#122e26;color:#d9e2d4;padding:43px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer-brand{font:500 21px var(--serif)}
+.footer p{font-size:10px;line-height:1.7;color:#a7b7a8;max-width:410px}
+.footer a{font-size:10px;color:#c9e96b}
+.footnote{border-top:1px solid #345043;margin-top:30px;padding-top:17px;font:9px var(--mono);color:#9bad9b;display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:850px){.wrap{width:min(100% - 40px,680px)}
+.navlinks{gap:16px}
+.navlinks a:nth-child(2){display:none}
+.hero-grid{grid-template-columns:1fr;gap:34px}
+.hero{padding:58px 0}
+.hero h1{max-width:600px}
+.scene-wrap{height:380px}
+.proofline{flex-wrap:wrap;justify-content:flex-start}
+.proofline span{width:100%}
+.section{padding:78px 0}
+.steps{grid-template-columns:repeat(2,1fr)}
+.step:nth-child(2){border-right:0}
+.step:nth-child(n+3){border-top:1px solid var(--line);padding-top:18px}
+.step:nth-child(3){padding-left:0}
+.mechanism{grid-template-columns:1fr;gap:35px}
+.mechanism-art{min-height:320px}
+.application-grid{grid-template-columns:1fr;gap:34px}
+.blog-grid{grid-template-columns:1fr 1fr}
+.article.feature{grid-column:1/-1}
+.workflow-grid{grid-template-columns:1fr;gap:35px}
+}
+
+    @media(max-width:560px){.wrap{width:calc(100% - 34px)}
+.topline .wrap span:last-child{display:none}
+.nav{height:68px}
+.navlinks{gap:10px}
+.navlinks a{display:none}
+.navcta{padding:10px 11px;font-size:10px}
+.hero{padding:48px 0 55px}
+.hero h1{font-size:57px}
+.hero-copy{font-size:13px}
+.hero-actions{align-items:stretch;flex-direction:column;max-width:240px}
+.scene-wrap{height:320px}
+.proofline{gap:14px}
+.proofline strong{font-size:13px}
+.section{padding:66px 0}
+.section-head,.blog-top{display:block}
+.section-intro{margin-top:17px}
+.steps{grid-template-columns:1fr 1fr}
+.step{min-height:200px;padding-right:12px}
+.step+.step{padding-left:12px}
+.step:nth-child(3){padding-left:0}
+.step h3{font-size:21px;margin-top:32px}
+.step p{font-size:10px}
+.mechanism-art{min-height:275px}
+.application-lead{font-size:30px}
+.blog-grid{grid-template-columns:1fr}
+.article.feature{grid-column:auto}
+.article,.article.feature{min-height:230px}
+.blog-top .btn{margin-top:22px}
+.flow-row{grid-template-columns:34px 1fr;gap:9px}
+.flow-badge{grid-column:2;justify-self:start}
+.footer-inner{align-items:flex-start;flex-direction:column}
+.footnote{flex-direction:column}
+.reveal{transition-duration:.35s}
+}
+
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+.reveal{opacity:1;transform:none}
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="topline"><div class="wrap"><span><b>Un guide pour comprendre</b> · édition génétique</span><span>Science claire, esprit critique</span></div></div>
+  <header class="wrap nav">
+    <a class="brand" href="#accueil" aria-label="CRISPR Cas9, accueil"><span class="brandmark" aria-hidden="true"></span><span>CRISPR<span style="color:#718c3c">·</span>CAS9</span></a>
+    <nav class="navlinks" aria-label="Navigation principale"><a href="#fonctionnement">La technologie</a><a href="#applications">Applications</a><a href="#blog">Le journal</a><a class="navcta" href="#comprendre">Comprendre en 2 min ↗</a></nav>
+  </header>
+  <main id="contenu">
+    <section class="hero" id="accueil"><div class="wrap hero-grid">
+      <div><div class="eyebrow">Le vivant, à hauteur de science</div><h1>Lire. Cibler.<br><em>Comprendre.</em></h1><p class="hero-copy">CRISPR-Cas9 a changé la façon dont les scientifiques étudient l’ADN. Voici un espace pour découvrir comment l’outil fonctionne, ce qu’il permet — et les questions qu’il soulève.</p><div class="hero-actions"><a class="btn primary" href="#fonctionnement">Explorer la technologie <span aria-hidden="true" style="margin-left:15px">↘</span></a><a class="btn secondary" href="#blog">Lire le journal</a></div><div class="hero-note">Un guide pédagogique · pas un conseil médical</div></div>
+      <div class="scene-wrap"><div class="scene-label">01 — Une séquence, une cible</div><canvas id="molecule" aria-label="Animation 3D d'une double hélice d'ADN et de nucléotides"></canvas><div class="fallback" id="fallback">A · T &nbsp; / &nbsp; C · G</div><div class="scene-axis">ADN <span>↗</span> CAS9 <span>↗</span> CIBLE</div></div>
+    </div></section>
+    <div class="wrap proofline"><span>La promesse n’est pas une baguette magique</span><strong>Un outil puissant — avec des limites à comprendre</strong><strong>Recherche ≠ traitement disponible</strong></div>
+    <section class="section" id="comprendre"><div class="wrap"><div class="section-kicker">02 / En bref</div><div class="section-head"><h2>Une paire de ciseaux guidée par une adresse.</h2><p class="section-intro">CRISPR-Cas9 est un outil de biologie moléculaire. Il aide les chercheurs à cibler une région précise de l’ADN pour l’étudier ou la modifier.</p></div><div class="steps">
+      <article class="step"><div class="step-number">01 — REPÉRER</div><h3>La séquence guide</h3><p>Un ARN guide est conçu pour reconnaître une séquence d’ADN complémentaire à la cible choisie.</p></article>
+      <article class="step"><div class="step-number">02 — RECONNAÎTRE</div><h3>La protéine Cas9</h3><p>Cas9 s’associe à l’ARN guide. Le complexe recherche une séquence compatible, près d’un motif PAM.</p></article>
+      <article class="step"><div class="step-number">03 — COUPER</div><h3>La coupure ciblée</h3><p>Si la reconnaissance est suffisante, Cas9 coupe les deux brins d’ADN à proximité du site visé.</p></article>
+      <article class="step"><div class="step-number">04 — RÉPARER</div><h3>La cellule répond</h3><p>La cellule répare la cassure. Cette réparation peut désactiver un gène ou, avec un modèle fourni, intégrer une modification.</p></article>
+    </div></div></section>
+    <section class="section dark-section" id="fonctionnement"><div class="wrap mechanism"><div><div class="section-kicker">03 / Le mécanisme</div><h2>Une adresse moléculaire. Une réaction cellulaire.</h2><p>Le système CRISPR-Cas9 s’inspire d’un mécanisme de défense bactérien. En laboratoire, il est reprogrammé pour viser une séquence donnée. Le résultat dépend ensuite du type de cellule, de la livraison des composants et de sa réparation de l’ADN.</p><div class="mechanism-list"><div class="mechanism-row"><span class="n">A</span><span><b>ARN guide</b> — apporte la reconnaissance de la séquence recherchée.</span></div><div class="mechanism-row"><span class="n">B</span><span><b>Cas9</b> — enzyme qui réalise la coupure lorsque les conditions sont réunies.</span></div><div class="mechanism-row"><span class="n">C</span><span><b>Réparation</b> — processus cellulaire qui détermine l’issue, parfois variable.</span></div></div></div><div class="mechanism-art" aria-label="Schéma simplifié de deux brins d'ADN séparés par une coupure"><div class="sequence top"><span>A</span><span>T</span><span>G</span><span>C</span><span>A</span><span>G</span><span>T</span><span>C</span><span>A</span><span>G</span><span>T</span><span>C</span></div><div class="cut-line"></div><div class="sequence bottom"><span>T</span><span>A</span><span>C</span><span>G</span><span>T</span><span>C</span><span>A</span><span>G</span><span>T</span><span>C</span><span>A</span><span>G</span></div><div class="art-caption">Schéma pédagogique · non à l’échelle</div></div></div></section>
+    <section class="applications" id="applications"><div class="wrap application-grid"><div><div class="section-kicker">04 / Usages & questions</div><p class="application-lead">La même technologie ouvre des pistes différentes — et appelle des précautions différentes.</p><p class="application-copy">La recherche explore CRISPR-Cas9 dans de nombreux contextes. Une application expérimentale n’est pas nécessairement un traitement validé, autorisé ou accessible. Les résultats et le cadre réglementaire évoluent selon les pays et les indications.</p><div class="caution"><strong>À garder en tête :</strong> précision ne signifie pas infaillibilité. Les effets hors cible, la délivrance dans les cellules et les conséquences à long terme font partie des sujets étudiés.</div></div><div class="applications-list"><div class="app-row"><span class="n">01</span><div><strong>Recherche fondamentale</strong><small>Étudier le rôle d’un gène dans une cellule ou un modèle biologique.</small></div><span class="arrow">↗</span></div><div class="app-row"><span class="n">02</span><div><strong>Biotechnologies</strong><small>Explorer des modifications de cellules ou d’organismes en laboratoire.</small></div><span class="arrow">↗</span></div><div class="app-row"><span class="n">03</span><div><strong>Médecine en recherche</strong><small>Évaluer des stratégies thérapeutiques dans des essais encadrés.</small></div><span class="arrow">↗</span></div><div class="app-row"><span class="n">04</span><div><strong>Éthique & société</strong><small>Discuter des limites, de l’équité et des usages responsables.</small></div><span class="arrow">↗</span></div></div></div></section>
+    <section class="blog-section" id="blog"><div class="wrap"><div class="blog-top"><div><div class="section-kicker">05 / Le journal</div><h2 style="font:500 clamp(38px,5vw,62px)/1 var(--serif);letter-spacing:-.045em;margin:16px 0 0">La science en mouvement.</h2><p class="section-intro" style="margin-top:15px">Des articles de fond et une veille régulière pour suivre les recherches, les essais et les débats autour de l’édition génétique.</p></div><a class="btn secondary" href="#workflow">Comment les articles sont préparés ↗</a></div><div class="blog-grid">
+      <article class="article feature"><div class="article-type">Fondamentaux · Exemple de sujet</div><h3>CRISPR-Cas9 : que se passe-t-il après la coupure de l’ADN ?</h3><p>Comprendre le rôle de la réparation cellulaire et pourquoi le résultat n’est pas toujours identique.</p><div class="read-more">ARTICLE À SOURCER AVANT PUBLICATION ↗</div></article>
+      <article class="article"><div class="article-type">Recherche · Exemple de sujet</div><h3>Comment évalue-t-on les effets hors cible ?</h3><p>Les méthodes utilisées pour repérer les modifications non intentionnelles.</p><div class="read-more">SUJET DE DÉMONSTRATION ↗</div></article>
+      <article class="article"><div class="article-type">Société · Exemple de sujet</div><h3>Édition du génome : quelles questions éthiques ?</h3><p>Des repères pour distinguer recherche, soin et modifications transmissibles.</p><div class="read-more">SUJET DE DÉMONSTRATION ↗</div></article>
+    </div><div class="editorial-note">Maquette : ces titres illustrent les rubriques envisagées ; ce ne sont pas des articles publiés.</div></div></section>
+    <section class="workflow" id="workflow"><div class="wrap workflow-grid"><div><div class="section-kicker">06 / Une veille utile, pas automatique à l’aveugle</div><h2>Un nouvel article, chaque jour. Une vraie relecture avant publication.</h2><p class="workflow-intro">La veille peut être automatisée au quotidien. Pour préserver la fiabilité, chaque article est préparé avec ses sources, puis relu avant d’être publié.</p></div><div class="workflow-flow"><div class="flow-row"><span class="flow-num">01</span><div class="flow-text"><strong>Repérer les nouveautés</strong><small>Journaux scientifiques, institutions et sources fiables.</small></div><span class="flow-badge">Automatisable</span></div><div class="flow-row"><span class="flow-num">02</span><div class="flow-text"><strong>Vérifier la pertinence</strong><small>Écarter les doublons, prépublications fragiles et titres trompeurs.</small></div><span class="flow-badge">Tri éditorial</span></div><div class="flow-row"><span class="flow-num">03</span><div class="flow-text"><strong>Rédiger un brouillon sourcé</strong><small>Résumé accessible, liens primaires, date et limites de l’étude.</small></div><span class="flow-badge">Brouillon IA</span></div><div class="flow-row"><span class="flow-num">04</span><div class="flow-text"><strong>Relire puis publier</strong><small>Validation des faits, du contexte et des formulations santé.</small></div><span class="flow-badge human">Validation humaine</span></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><div class="footer-inner"><div><div class="footer-brand">CRISPR·CAS9</div><p>Un projet éditorial indépendant pour expliquer l’édition génétique avec clarté, nuance et des sources vérifiables.</p></div><div><a href="#accueil">Retour en haut ↑</a></div></div><div class="footnote"><span>Contenu pédagogique — ne remplace pas un avis médical.</span><span>Concept de maquette · crisprcas9.fr</span></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script>
+  (()=>{
+    const canvas=document.querySelector('#molecule'), fallback=document.querySelector('#fallback');
+    if(!window.THREE){fallback.style.display='flex';return;}
+
+    const wrap=canvas.parentElement, scene=new THREE.Scene();
+    const camera=new THREE.PerspectiveCamera(38,1,.1,100);camera.position.set(0,0,12);
+    const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true}
+);renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x173c31,1);
+    const group=new THREE.Group();scene.add(group);
+    const helix=new THREE.Group();group.add(helix);
+    const materialA=new THREE.MeshStandardMaterial({color:0xc9e96b,roughness:.3,metalness:.1}
+);
+    const materialB=new THREE.MeshStandardMaterial({color:0xe9efdd,roughness:.35,metalness:.05}
+);
+    const rungMat=new THREE.LineBasicMaterial({color:0x9fb98c,transparent:true,opacity:.58}
+);
+    const beadGeo=new THREE.SphereGeometry(.075,10,8), rungGeo=new THREE.SphereGeometry(.035,7,6), count=126;
+    const beadsA=new THREE.InstancedMesh(beadGeo,materialA,count),beadsB=new THREE.InstancedMesh(beadGeo,materialB,count),rungDotsA=new THREE.InstancedMesh(rungGeo,materialA,42),rungDotsB=new THREE.InstancedMesh(rungGeo,materialB,42),dummy=new THREE.Object3D(),rungPositions=[];
+    let rungIndex=0;
+    for(let i=0;i<count;i++){
+      const t=i/(count-1), y=(t-.5)*8.3, a=t*Math.PI*8, r=1.23;
+      const p1=new THREE.Vector3(Math.cos(a)*r,y,Math.sin(a)*r),p2=new THREE.Vector3(Math.cos(a+Math.PI)*r,y,Math.sin(a+Math.PI)*r);
+      dummy.position.copy(p1);dummy.updateMatrix();beadsA.setMatrixAt(i,dummy.matrix);dummy.position.copy(p2);dummy.updateMatrix();beadsB.setMatrixAt(i,dummy.matrix);
+      if(i%3===0){rungPositions.push(...p1.toArray(),...p2.toArray());dummy.position.copy(p1);dummy.updateMatrix();rungDotsA.setMatrixAt(rungIndex,dummy.matrix);dummy.position.copy(p2);dummy.updateMatrix();rungDotsB.setMatrixAt(rungIndex,dummy.matrix);rungIndex++;}
+
+    }
+
+    beadsA.instanceMatrix.needsUpdate=true;beadsB.instanceMatrix.needsUpdate=true;rungDotsA.instanceMatrix.needsUpdate=true;rungDotsB.instanceMatrix.needsUpdate=true;
+    const rungs=new THREE.LineSegments(new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute(rungPositions,3)),rungMat);helix.add(beadsA,beadsB,rungs,rungDotsA,rungDotsB);
+    const particleMat=new THREE.PointsMaterial({color:0xb7ca9f,size:.025,transparent:true,opacity:.45}
+);const positions=[];for(let i=0;i<360;i++)positions.push((Math.random()-.5)*11,(Math.random()-.5)*9,(Math.random()-.5)*5);const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));scene.add(new THREE.Points(pg,particleMat));
+    const light=new THREE.PointLight(0xc9e96b,17,18);light.position.set(3,3,5);scene.add(light);scene.add(new THREE.AmbientLight(0xe8f4e0,1.7));
+    const resize=()=>{const w=wrap.clientWidth,h=wrap.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
+;new ResizeObserver(resize).observe(wrap);resize();
+    let targetX=0,targetY=0;wrap.addEventListener('pointermove',e=>{const r=wrap.getBoundingClientRect();targetY=((e.clientX-r.left)/r.width-.5)*.35;targetX=((e.clientY-r.top)/r.height-.5)*.2}
+);wrap.addEventListener('pointerleave',()=>{targetX=0;targetY=0}
+);
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let frame=0,raf=0,visible=true;
+    function animate(){if(!visible||document.hidden){raf=0;return;}
+if(reduce){renderer.render(scene,camera);return;}
+raf=requestAnimationFrame(animate);frame+=.006;helix.rotation.y+=(targetY+Math.sin(frame)*.08-helix.rotation.y)*.025;helix.rotation.x+=(targetX-helix.rotation.x)*.025;helix.position.y=Math.sin(frame*.7)*.07;renderer.render(scene,camera)}
+
+    const sceneObserver=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(visible&&!raf)animate();else if(!visible&&raf){cancelAnimationFrame(raf);raf=0}
+}
+,{threshold:0}
+);sceneObserver.observe(wrap);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden&&visible&&!raf)animate();else if(document.hidden&&raf){cancelAnimationFrame(raf);raf=0}
+}
+);animate();
+  }
+)();
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+}
+),{threshold:.12}
+);document.querySelectorAll('.section,.applications,.blog-section,.workflow,.proofline,.footer').forEach(el=>{el.classList.add('reveal');observer.observe(el)}
+);
+  </script>
+</body>
+</html>

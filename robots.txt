@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://floskinou.github.io/crisprcas9/sitemap.xml

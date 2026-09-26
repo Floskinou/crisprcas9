@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c31">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <meta property="og:type" content="{{OG_TYPE}}">
+  <meta property="og:site_name" content="CRISPR·CAS9">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <link rel="icon" href="{{BASE}}assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{BASE}}assets/style.css">
+  {{EXTRA_HEAD}}
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="topline"><div class="wrap"><span><b>La référence francophone</b> · édition génétique</span><span>{{TOPLINE}}</span></div></div>
+  <header class="sitehead">
+    <div class="wrap sitehead-inner">
+      <a class="brand" href="{{BASE}}index.html" aria-label="CRISPR Cas9, accueil"><span class="brandmark" aria-hidden="true"></span><span>CRISPR<span class="dot">·</span>CAS9</span></a>
+      <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav">Menu</button>
+      <nav class="mainnav" id="mainnav" aria-label="Navigation principale">{{NAV}}</nav>
+    </div>
+  </header>
+  <main id="contenu">
+{{BODY}}
+  </main>
+  <footer class="sitefoot">
+    <div class="wrap">
+      <div class="foot-cols">
+        <div class="foot-about">
+          <div class="foot-brand">CRISPR·CAS9</div>
+          <p>Un projet éditorial indépendant pour expliquer l’édition génétique en français : mécanismes, applications réelles, limites documentées et enjeux éthiques. Chaque affirmation factuelle renvoie à une source vérifiable.</p>
+          <p class="foot-note">Contenu informatif et pédagogique. Il ne constitue ni un avis médical, ni une recommandation de traitement.</p>
+        </div>
+        <nav class="foot-nav" aria-label="Plan du site">
+          <div><h2>Comprendre</h2><ul>
+            <li><a href="{{BASE}}comprendre.html">Les bases</a></li>
+            <li><a href="{{BASE}}mecanisme.html">Le mécanisme</a></li>
+            <li><a href="{{BASE}}outils.html">La famille CRISPR</a></li>
+            <li><a href="{{BASE}}histoire.html">Chronologie</a></li>
+            <li><a href="{{BASE}}glossaire.html">Glossaire</a></li>
+          </ul></div>
+          <div><h2>Applications</h2><ul>
+            <li><a href="{{BASE}}applications.html">Panorama</a></li>
+            <li><a href="{{BASE}}therapies.html">Thérapies</a></li>
+            <li><a href="{{BASE}}limites.html">Limites &amp; risques</a></li>
+            <li><a href="{{BASE}}ethique.html">Éthique &amp; droit</a></li>
+          </ul></div>
+          <div><h2>Ressources</h2><ul>
+            <li><a href="{{BASE}}videos.html">Vidéos en français</a></li>
+            <li><a href="{{BASE}}ressources.html">Sources fiables</a></li>
+            <li><a href="{{BASE}}blog/">Le journal</a></li>
+            <li><a href="{{BASE}}a-propos.html">À propos &amp; méthode</a></li>
+          </ul></div>
+        </nav>
+      </div>
+      <div class="footnote">
+        <span>© {{YEAR}} CRISPR·CAS9 — projet indépendant. Vidéos et marques citées appartiennent à leurs auteurs respectifs.</span>
+        <span><a href="{{BASE}}a-propos.html">Transparence éditoriale</a> · <a href="{{BASE}}ressources.html">Sources</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="{{BASE}}assets/site.js" defer></script>
+  {{EXTRA_BODY}}
+</body>
+</html>

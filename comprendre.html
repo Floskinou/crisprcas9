@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c31">
+  <title>Comprendre CRISPR-Cas9 : les bases sans simplisme — CRISPR·CAS9</title>
+  <meta name="description" content="Qu’est-ce que CRISPR-Cas9 ? Vocabulaire, analogies et limites des analogies, ce que l’outil fait réellement et ce qu’il ne fait pas.">
+  <link rel="canonical" href="https://floskinou.github.io/crisprcas9/comprendre.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CRISPR·CAS9">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Comprendre CRISPR-Cas9 : les bases sans simplisme — CRISPR·CAS9">
+  <meta property="og:description" content="Qu’est-ce que CRISPR-Cas9 ? Vocabulaire, analogies et limites des analogies, ce que l’outil fait réellement et ce qu’il ne fait pas.">
+  <meta property="og:url" content="https://floskinou.github.io/crisprcas9/comprendre.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comprendre CRISPR-Cas9 : les bases sans simplisme — CRISPR·CAS9">
+  <meta name="twitter:description" content="Qu’est-ce que CRISPR-Cas9 ? Vocabulaire, analogies et limites des analogies, ce que l’outil fait réellement et ce qu’il ne fait pas.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="topline"><div class="wrap"><span><b>La référence francophone</b> · édition génétique</span><span>Repères pour débuter</span></div></div>
+  <header class="sitehead">
+    <div class="wrap sitehead-inner">
+      <a class="brand" href="index.html" aria-label="CRISPR Cas9, accueil"><span class="brandmark" aria-hidden="true"></span><span>CRISPR<span class="dot">·</span>CAS9</span></a>
+      <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav">Menu</button>
+      <nav class="mainnav" id="mainnav" aria-label="Navigation principale"><ul><li class="navitem"><button class="navgrp" type="button" aria-expanded="false">Comprendre</button><ul class="navpanel"><li><a href="comprendre.html" aria-current="page">Les bases</a></li><li><a href="mecanisme.html">Le mécanisme</a></li><li><a href="outils.html">La famille CRISPR</a></li><li><a href="histoire.html">Chronologie</a></li><li><a href="glossaire.html">Glossaire</a></li></ul></li><li class="navitem"><button class="navgrp" type="button" aria-expanded="false">Applications</button><ul class="navpanel"><li><a href="applications.html">Panorama</a></li><li><a href="therapies.html">Thérapies</a></li><li><a href="limites.html">Limites & risques</a></li></ul></li><li><a href="ethique.html">Éthique & droit</a></li><li><a href="videos.html">Vidéos</a></li><li><a class="navcta" href="blog/">Le journal ↗</a></li></ul></nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="pagehero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a> › Comprendre</nav>
+        <span class="kicker">Les bases</span>
+        <h1 class="h1">Comprendre CRISPR-Cas9 sans simplisme</h1>
+        <p class="lead">CRISPR-Cas9 est un outil de biologie moléculaire qui permet de viser une séquence précise d’ADN. Cette page pose le vocabulaire, décrit ce que l’outil fait réellement, et explique pourquoi les images d’Épinal — les « ciseaux magiques » — finissent par induire en erreur.</p>
+        <div class="pagemeta"><span>Lecture ~9 min</span><span>Niveau : débutant</span><span>Sources en bas de page</span><span>Mise à jour : septembre 2026</span></div>
+      </div>
+    </section>
+
+    <div class="wrap doc">
+      <article class="prose">
+        <p class="h-intro">Commençons par la phrase la moins spectaculaire et la plus juste : CRISPR-Cas9 est un système qui permet de reconnaître une séquence d’ADN choisie, puis d’y provoquer une coupure. Tout le reste — les thérapies, les débats éthiques, les brevets — découle de cette capacité très simple, et des conséquences imprévisibles de la réparation qui suit.</p>
+
+        <h2 id="bacterien">1. Un système de défense bactérien, détourné</h2>
+        <p>CRISPR n’a pas été inventé dans un laboratoire de génétique humaine. Les séquences qui portent ce nom ont d’abord été observées chez des bactéries, où elles constituent une mémoire immunitaire : la bactérie archive des fragments d’ADN de virus qui l’ont attaquée, puis s’en sert pour les reconnaître et les découper lors d’une nouvelle infection. Les protéines associées à ces archives s’appellent les protéines Cas.</p>
+        <p>En 2012, une équipe dirigée par Emmanuelle Charpentier et Jennifer Doudna montre qu’il suffit d’une protéine Cas9 et d’un ARN guide synthétique pour découper n’importe quelle séquence d’ADN choisie, <em>in vitro</em>. Le système devient programmable. Cette reprogrammabilité est la véritable rupture : on ne découvre pas un nouvel outil, on rend un outil existant adressable à volonté.</p>
+
+        <h2 id="vocabulaire">2. Le vocabulaire minimum</h2>
+        <p>Six termes suffisent pour lire la majorité des articles de vulgarisation.</p>
+        <div class="tablewrap">
+          <table>
+            <caption>Les six notions à retenir</caption>
+            <thead><tr><th scope="col">Terme</th><th scope="col">En une phrase</th><th scope="col">Attention</th></tr></thead>
+            <tbody>
+              <tr><td><strong>CRISPR</strong></td><td>Une famille de séquences d’ADN répétées présentes chez des bactéries, qui servent de mémoire immunitaire.</td><td>Le mot désigne à la fois le locus bactérien et, par abus de langage, toute la technologie.</td></tr>
+              <tr><td><strong>Cas9</strong></td><td>L’enzyme qui coupe l’ADN, guidée par un ARN.</td><td>Ce n’est qu’une protéine parmi une grande famille (Cas12, Cas13…).</td></tr>
+              <tr><td><strong>ARN guide</strong></td><td>Une molécule d’ARN courte dont la séquence est complémentaire de la cible.</td><td>C’est lui qui porte l’adresse, pas la protéine.</td></tr>
+              <tr><td><strong>PAM</strong></td><td>Un motif de quelques bases que Cas9 doit reconnaître juste à côté de la cible pour pouvoir agir.</td><td>Sans PAM disponible, la cible reste inaccessible : cela restreint les sites éditables.</td></tr>
+              <tr><td><strong>Coupure double brin</strong></td><td>Une cassure des deux brins d’ADN au même endroit.</td><td>C’est un dommage pour la cellule, pas un simple « copier-coller ».</td></tr>
+              <tr><td><strong>Mosaïcisme</strong></td><td>Le fait que toutes les cellules d’un organisme ne portent pas la même modification.</td><td>Fréquent hors d’un contexte cellulaire contrôlé ; rarement mentionné dans les articles grand public.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="analogies">3. L’analogie des ciseaux, et ce qu’elle rate</h2>
+        <p>Comparer Cas9 à une paire de ciseaux guidée par un code-barres aide à comprendre les deux premières secondes du mécanisme. L’analogie devient trompeuse dès qu’on s’intéresse à la suite, pour trois raisons.</p>
+        <ul>
+          <li><strong>Elle suggère un geste technique.</strong> Or la coupure n’est pas une fin : elle déclenche une réaction de la cellule, qui répare comme elle peut. Selon le mode de réparation, le résultat va d’une inactivation propre à une insertion désordonnée.</li>
+          <li><strong>Elle masque la question de la délivrance.</strong> Le vrai obstacle des thérapies n’est pas de couper juste, c’est d’amener l’outil dans les bonnes cellules, sans le laisser agir ailleurs.</li>
+          <li><strong>Elle donne une impression de maîtrise totale.</strong> Dans une cellule vivante, l’ADN est enroulé, compacté, occupé par d’autres protéines. Une partie de la difficulté technique consiste à rendre la cible accessible.</li>
+        </ul>
+        <blockquote>Une coupure ciblée est un point de départ, pas une conclusion. Ce qui compte cliniquement, c’est ce que la cellule fait de la cassure.</blockquote>
+
+        <h2 id="faire">4. Ce que l’outil fait — et ce qu’il ne fait pas</h2>
+        <div class="tablewrap">
+          <table>
+            <caption>Attentes courantes confrontées à la réalité</caption>
+            <thead><tr><th scope="col">Idée répandue</th><th scope="col">Ce qui est exact</th></tr></thead>
+            <tbody>
+              <tr><td>« On remplace un gène défectueux par un gène sain. »</td><td>On peut tenter d’apporter un modèle de réparation, mais l’insertion précise reste nettement moins efficace que l’inactivation simple chez les cellules de mammifères.</td></tr>
+              <tr><td>« C’est un traitement disponible. »</td><td>Une seule thérapie issue de l’édition génomique est autorisée dans l’Union européenne à ce jour, pour deux maladies du sang et sous conditions strictes.</td></tr>
+              <tr><td>« Cela fonctionne dans l’embryon et se transmet. »</td><td>Techniquement très difficile, éthiquement encadré, juridiquement interdit en France dans une visée de transmission.</td></tr>
+              <tr><td>« Un seul guide, une seule cible. »</td><td>La spécificité n’est pas parfaite : un guide peut agir ailleurs, avec des conséquences variables selon le gène touché.</td></tr>
+              <tr><td>« La modification est définitive pour l’organisme. »</td><td>Elle est définitive dans les cellules modifiées. Si ces cellules ne se renouvellent pas, l’effet s’estompe avec elles.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="pourquoi">5. Pourquoi cela a changé la recherche</h2>
+        <p>Avant CRISPR, invalider un gène chez un modèle animal ou cellulaire demandait souvent des mois et un savoir-faire lourd. Le système a rendu cette opération accessible à des laboratoires qui n’étaient pas des spécialistes de l’ingénierie génétique. Deux conséquences en découlent, moins médiatisées que les thérapies mais tout aussi importantes.</p>
+        <p>D’abord, la biologie fonctionnelle a accéléré : on peut désormais tester le rôle de centaines de gènes en parallèle dans une même expérience. Ensuite, la barrière à l’entrée a baissé, ce qui pose une question de gouvernance : une technologie puissante, peu coûteuse et largement diffusée devient difficile à surveiller.</p>
+        <p>Cette baisse de coût explique aussi pourquoi le débat éthique a pris une dimension mondiale après 2015, et pourquoi l’annonce de 2018 sur des embryons humains modifiés en Chine a provoqué une condamnation quasi unanime de la communauté scientifique.</p>
+
+        <h2 id="suite">6. Questions fréquentes</h2>
+        <div class="faq">
+          <details><summary>CRISPR et « édition génétique », est-ce la même chose ?</summary><div class="answer">Dans l’usage courant, oui. « Édition génomique » est le terme le plus rigoureux, car il englobe toutes les techniques qui modifient l’ADN à un endroit choisi, y compris celles qui n’utilisent pas CRISPR (nucléases à doigts de zinc, TALEN, et les approches plus récentes d’écriture de séquence).</div></details>
+          <details><summary>Faut-il une coupure pour modifier l’ADN ?</summary><div class="answer">Non, et c’est une évolution importante : les éditeurs de bases et le prime editing modifient une ou quelques bases sans casser les deux brins. Cela réduit une partie des risques liés à la réparation des cassures, sans les supprimer.</div></details>
+          <details><summary>Peut-on éditer n’importe quel endroit du génome ?</summary><div class="answer">Non. Il faut un PAM à proximité du site visé, une cible accessible dans la chromatine et un guide suffisamment spécifique. Ces contraintes expliquent pourquoi certains projets thérapeutiques choisissent d’agir sur un élément de régulation plutôt que sur la mutation elle-même.</div></details>
+          <details><summary>Est-ce que cela concerne déjà des patients réels ?</summary><div class="answer">Oui, dans un cadre très restreint : une thérapie autorisée en Europe pour la drépanocytose sévère et la bêta-thalassémie transfusion-dépendante, et des essais cliniques en cours pour d’autres indications. Le détail est sur la page consacrée aux thérapies.</div></details>
+          <details><summary>Pourquoi parle-t-on de « ciseaux moléculaires » ?</summary><div class="answer">Parce que l’image est parlante pour décrire la coupure. Gardez-la en tête comme une métaphore d’entrée, pas comme un modèle : la partie déterminante se joue après la coupure, dans la réparation.</div></details>
+          <details><summary>Le site traite-t-il des risques ?</summary><div class="answer">Oui, sur une page dédiée : effets hors cible et leur mesure, mosaïcisme, réponse cellulaire au dommage, immunogénicité, réarrangements chromosomiques, et les limites de ce que l’on sait aujourd’hui.</div></details>
+        </div>
+      </article>
+
+      <aside class="toc">
+        <h2>Sur cette page</h2>
+        <ol>
+          <li><a href="#bacterien">Un système bactérien</a></li>
+          <li><a href="#vocabulaire">Le vocabulaire minimum</a></li>
+          <li><a href="#analogies">L’analogie et ses ratés</a></li>
+          <li><a href="#faire">Ce que l’outil fait</a></li>
+          <li><a href="#pourquoi">Pourquoi cela change tout</a></li>
+          <li><a href="#suite">Questions fréquentes</a></li>
+        </ol>
+        <a class="totop" href="#contenu">↑ Haut de page</a>
+      </aside>
+    </div>
+
+    <section class="section alt">
+      <div class="wrap">
+        <span class="kicker">Sources de cette page</span>
+        <h2 class="h2" style="font-size:26px">Vérifier par soi-même</h2>
+        <ol class="sources">
+          <li>Jinek M. <em>et al.</em>, « A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity », <em>Science</em>, 2012 — <a href="https://doi.org/10.1126/science.1225829">doi.org/10.1126/science.1225829</a></li>
+          <li>Deltcheva E. <em>et al.</em>, « CRISPR RNA maturation by trans-encoded small RNA and host factor RNase III », <em>Nature</em>, 2011 — <a href="https://doi.org/10.1038/nature09886">doi.org/10.1038/nature09886</a></li>
+          <li>Institut national de la santé et de la recherche médicale, dossier « Édition génomique » — <a href="https://www.inserm.fr/dossier/edition-genomique">inserm.fr/dossier/edition-genomique</a></li>
+          <li>Planet-Vie (ENS Lyon), « Principe de fonctionnement du système CRISPR/Cas9 » — <a href="https://planet-vie.ens.fr/mediatheque/principe-de-fonctionnement-du-systeme-crisprcas9">planet-vie.ens.fr</a></li>
+          <li>Anzalone A. V. <em>et al.</em>, « Search-and-replace genome editing without double-strand breaks or donor DNA », <em>Nature</em>, 2019 — <a href="https://doi.org/10.1038/s41586-019-1711-4">doi.org/10.1038/s41586-019-1711-4</a></li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+  <footer class="sitefoot">
+    <div class="wrap">
+      <div class="foot-cols">
+        <div class="foot-about">
+          <div class="foot-brand">CRISPR·CAS9</div>
+          <p>Un projet éditorial indépendant pour expliquer l’édition génétique en français : mécanismes, applications réelles, limites documentées et enjeux éthiques. Chaque affirmation factuelle renvoie à une source vérifiable.</p>
+          <p class="foot-note">Contenu informatif et pédagogique. Il ne constitue ni un avis médical, ni une recommandation de traitement.</p>
+        </div>
+        <nav class="foot-nav" aria-label="Plan du site">
+          <div><h2>Comprendre</h2><ul>
+            <li><a href="comprendre.html">Les bases</a></li>
+            <li><a href="mecanisme.html">Le mécanisme</a></li>
+            <li><a href="outils.html">La famille CRISPR</a></li>
+            <li><a href="histoire.html">Chronologie</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+          </ul></div>
+          <div><h2>Applications</h2><ul>
+            <li><a href="applications.html">Panorama</a></li>
+            <li><a href="therapies.html">Thérapies</a></li>
+            <li><a href="limites.html">Limites &amp; risques</a></li>
+            <li><a href="ethique.html">Éthique &amp; droit</a></li>
+          </ul></div>
+          <div><h2>Ressources</h2><ul>
+            <li><a href="videos.html">Vidéos en français</a></li>
+            <li><a href="ressources.html">Sources fiables</a></li>
+            <li><a href="blog/">Le journal</a></li>
+            <li><a href="a-propos.html">À propos &amp; méthode</a></li>
+          </ul></div>
+        </nav>
+      </div>
+      <div class="footnote">
+        <span>© 2026 CRISPR·CAS9 — projet indépendant. Vidéos et marques citées appartiennent à leurs auteurs respectifs.</span>
+        <span><a href="a-propos.html">Transparence éditoriale</a> · <a href="ressources.html">Sources</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+  
+</body>
+</html>

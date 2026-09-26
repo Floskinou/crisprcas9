@@ -1,0 +1,98 @@
+    <section class="pagehero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d’Ariane"><a href="{{BASE}}index.html">Accueil</a> › <a href="{{BASE}}blog/index.html">Le journal</a> › Méthode</nav>
+        <span class="kicker">Méthode · épistémologie</span>
+        <h1 class="h1">Effets hors cible : comment mesure-t-on la précision d’une édition ?</h1>
+        <p class="lead">« L’édition est précise » ne veut rien dire sans méthode de mesure. Petit guide des techniques utilisées pour traquer les modifications non voulues — et de ce que chacune laisse passer.</p>
+        <div class="pagemeta"><span>26 septembre 2026</span><span>Lecture ~12 min</span><span>Niveau intermédiaire</span></div>
+      </div>
+    </section>
+
+    <div class="wrap doc">
+      <article class="prose">
+        <p class="h-intro">C’est la phrase la plus répandue sur CRISPR : « c’est précis ». Elle est exacte sur le principe et trompeuse en pratique, parce que la reconnaissance d’une séquence par un ARN guide n’est pas un verrou strict. Comprendre comment on mesure cette imprécision, et avec quelles limites, est la meilleure façon d’évaluer une étude.</p>
+
+        <h2 id="definition">1. Deux phénomènes différents, souvent confondus</h2>
+        <p>Un effet hors cible, c’est une modification produite ailleurs que sur le site visé. Mais le terme recouvre deux choses qu’il vaut mieux séparer :</p>
+        <ul>
+          <li><strong>Une coupure à un autre endroit du génome</strong>, parce qu’une séquence proche a été reconnue. L’outil a fonctionné correctement, sur la mauvaise cible.</li>
+          <li><strong>Un événement chromosomique complexe</strong> au site visé ou entre deux sites : délétion étendue, réarrangement, perte d’un chromosome. On ne cherche plus une ressemblance de séquence mais un dégât de structure.</li>
+        </ul>
+        <p>Les méthodes de détection ont été conçues principalement pour le premier cas. Le second explique l’intérêt croissant porté au séquençage du génome entier dans les contrôles.</p>
+
+        <h2 id="prediction">2. La prédiction par logiciel : nécessaire, jamais suffisante</h2>
+        <p>Le premier réflexe consiste à comparer informatiquement le guide à l’ensemble du génome pour repérer les séquences proches. Ces outils classent des milliers de sites candidats selon un score de ressemblance.</p>
+        <p>Leur apport est réel : ils orientent le choix du guide et permettent de hiérarchiser la vérification. Leur limite est structurelle : la fidélité de l’enzyme dépend aussi de la conformation locale de l’ADN, du type cellulaire et de l’accessibilité de la chromatine — des éléments qu’une comparaison de lettres ne peut pas capturer. Un site prédit comme probable peut ne jamais être coupé dans une cellule réelle ; une coupure réelle peut n’avoir été prédite par aucun outil.</p>
+        <div class="callout"><strong>Règle pratique</strong>Un score de prédiction n’est pas une mesure. Il détermine ce qu’il faut aller vérifier expérimentalement, il ne remplace pas la vérification.</div>
+
+        <h2 id="cellulaire">3. Détecter dans les cellules vivantes</h2>
+        <p>Ces approches ont l’avantage de travailler dans le contexte biologique réel — et l’inconvénient d’être limitées au type cellulaire et au moment de l’expérience.</p>
+        <ul>
+          <li><strong>Marquage des cassures.</strong> On introduit un petit fragment d’ADN marqué, qui vient s’insérer aux cassures réellement formées ; on le retrouve ensuite par séquençage. On obtient les sites effectivement coupés dans ces cellules. Limite : les événements rares restent difficiles à détecter, et les cellules non viables échappent à l’analyse.</li>
+          <li><strong>Suivi de la machinerie de réparation.</strong> On localise la protéine qui se fixe sur les cassures, ce qui cartographie les endroits où la cellule a détecté un dommage. Avantage : pas besoin d’insérer d’ADN exogène. Limite : on mesure la reconnaissance du dommage, pas forcément la coupure qui en est à l’origine.</li>
+          <li><strong>Séquençage ciblé profond des régions candidates.</strong> On amplifie puis on lit très profondément les sites suspectés, jusqu’à des fréquences très basses. Gourmand en données, et limité aux sites que l’on a déjà listés.</li>
+        </ul>
+
+        <h2 id="invitro">4. Détecter sur de l’ADN en tube</h2>
+        <p>Les méthodes <em>in vitro</em> couvrent un spectre beaucoup plus large, au prix d’un éloignement du contexte cellulaire.</p>
+        <ul>
+          <li><strong>Digestion de l’ADN génomique entier.</strong> On fait agir l’enzyme sur l’ADN du génome, puis on localise les coupures par séquençage. Tous les sites accessibles au guide sont détectés, y compris ceux que les approches cellulaires manquent.</li>
+          <li><strong>ADN circulaire reconstitué.</strong> On circularise des fragments du génome et on ne conserve que ceux effectivement linéarisés par l’enzyme : plus sensible sur les événements rares, mais sur une molécule libre de toutes les contraintes de la cellule.</li>
+          <li><strong>Cribles enzymatiques comparatifs.</strong> Certaines variantes mesurent, sur des milliers de séquences en parallèle, l’activité de l’enzyme : utile pour comparer plusieurs guides ou plusieurs versions de l’enzyme.</li>
+        </ul>
+        <p>Le défaut commun de ces approches est un excès de zèle : elles rapportent des sites que la cellule n’aurait jamais coupés, parce que l’ADN y est présenté sans ses protéines. Un résultat <em>in vitro</em> doit donc être confirmé en contexte cellulaire pour être interprété.</p>
+
+        <h2 id="tableau">5. Comparer les approches</h2>
+        <div class="tablewrap">
+          <table>
+            <caption>Ce que chaque famille de méthodes permet de conclure</caption>
+            <thead><tr><th scope="col">Famille</th><th scope="col">Contexte</th><th scope="col">Point fort</th><th scope="col">Angle mort</th></tr></thead>
+            <tbody>
+              <tr><td>Prédiction par logiciel</td><td>Aucun</td><td>Rapide, permet de choisir un guide</td><td>Ne mesure rien ; ignore la chromatine</td></tr>
+              <tr><td>Marquage des cassures</td><td>Cellules vivantes</td><td>Sites réellement coupés, fréquences relatives</td><td>Événements rares, cellules qui ne survivent pas</td></tr>
+              <tr><td>Suivi de la réparation</td><td>Cellules vivantes</td><td>Aucun ADN exogène requis</td><td>Mesure un signal de dommage, pas la coupure</td></tr>
+              <tr><td>Digestion <em>in vitro</em></td><td>ADN purifié</td><td>Très large spectre, grande sensibilité</td><td>Contexte non cellulaire : sur-détection</td></tr>
+              <tr><td>Séquençage d’amplicons</td><td>Cellules, patient</td><td>Fréquence très basse sur un site donné</td><td>Seulement les sites déjà connus</td></tr>
+              <tr><td>Génome entier</td><td>Cellules, patient</td><td>Détecte aussi les grands réarrangements</td><td>Sensibilité limitée par la profondeur de lecture, coût</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="interpretation">6. Comment lire une affirmation de précision</h2>
+        <ol>
+          <li><strong>Cherchez la méthode.</strong> Sans nom de méthode, l’affirmation n’a pas de contenu vérifiable.</li>
+          <li><strong>Cherchez le type cellulaire.</strong> Un résultat obtenu dans une lignée immortalisée de laboratoire ne se transpose pas directement à des cellules de patient.</li>
+          <li><strong>Cherchez le seuil de détection.</strong> Une méthode qui détecte à 1 % ne verra jamais un événement à 0,01 %. Ce n’est pas une preuve d’absence.</li>
+          <li><strong>Cherchez la validation croisée.</strong> Une étude sérieuse utilise au moins deux approches de familles différentes, parce que leurs angles morts ne se recouvrent pas.</li>
+          <li><strong>Distinguez le site visé du reste du génome.</strong> L’absence de modifications au site visé ne dit rien des autres sites, et inversement.</li>
+        </ol>
+
+        <h2 id="conclusion">7. Pourquoi cette question n’est pas purement académique</h2>
+        <p>Dans un traitement ex vivo, on dispose d’un contrôle décisif : les cellules peuvent être analysées avant d’être réadministrées, et un lot non conforme peut être écarté. Dans une administration directe dans l’organisme, ce contrôle n’existe pas — l’outil agit, ou pas, sans possibilité de vérification préalable. C’est l’une des raisons pour lesquelles les techniques sans coupure des deux brins progressent, et pour lesquelles la rigueur des méthodes de détection est devenue un enjeu de sécurité et non de seule curiosité méthodologique.</p>
+
+        <h2 id="sources">Sources</h2>
+        <ol class="sources">
+          <li>Littérature méthodologique sur la détection des sites coupés dans les cellules vivantes et sur l’ADN purifié (travaux publiés à partir de 2015 sous les noms GUIDE-seq, DIGENOME-seq, CIRCLE-seq, SITE-seq, DISCOVER-seq, CHANGE-seq) — recherche par nom de méthode : <a href="https://pubmed.ncbi.nlm.nih.gov/">pubmed.ncbi.nlm.nih.gov</a></li>
+          <li>Ihry R. J. <em>et al.</em>, « p53 inhibits CRISPR-Cas9 engineering in human pluripotent stem cells », <em>Nature Medicine</em>, 2018 — <a href="https://www.nature.com/articles/s41591-018-0050-6">nature.com</a></li>
+          <li>« Whole chromosome loss and genomic instability in mouse embryos after CRISPR-Cas9 genome editing », <em>Nature Communications</em>, 2021 — <a href="https://doi.org/10.1038/s41467-021-26097-y">doi.org</a></li>
+          <li>Planet-Vie (ENS Lyon), fonctionnement du système CRISPR/Cas9 et questions de spécificité — <a href="https://planet-vie.ens.fr/mediatheque/principe-de-fonctionnement-du-systeme-crisprcas9">planet-vie.ens.fr</a></li>
+          <li>Agence européenne des médicaments, exigences de suivi à long terme des médicaments de thérapie génique — <a href="https://www.ema.europa.eu/en/human-regulatory-overview/advanced-therapies">ema.europa.eu</a></li>
+        </ol>
+{{PAGER}}
+      </article>
+
+      <aside class="toc">
+        <h2>Dans cet article</h2>
+        <ol>
+          <li><a href="#definition">Deux phénomènes distincts</a></li>
+          <li><a href="#prediction">La prédiction par logiciel</a></li>
+          <li><a href="#cellulaire">Détection dans les cellules</a></li>
+          <li><a href="#invitro">Détection sur ADN purifié</a></li>
+          <li><a href="#tableau">Comparer les approches</a></li>
+          <li><a href="#interpretation">Lire une affirmation de précision</a></li>
+          <li><a href="#conclusion">Enjeu de sécurité</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ol>
+        <a class="totop" href="#contenu">↑ Haut de page</a>
+      </aside>
+    </div>

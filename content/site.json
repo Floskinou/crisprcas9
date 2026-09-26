@@ -1,0 +1,329 @@
+{
+  "site_url": "https://floskinou.github.io/crisprcas9",
+  "site_name": "CRISPR·CAS9",
+  "domain_note": "Le domaine crisprcas9.fr est réservé ; changer site_url ici régénère canoniques et sitemap.",
+  "nav": [
+    {
+      "label": "Comprendre",
+      "items": [
+        {
+          "href": "comprendre.html",
+          "label": "Les bases"
+        },
+        {
+          "href": "mecanisme.html",
+          "label": "Le mécanisme"
+        },
+        {
+          "href": "outils.html",
+          "label": "La famille CRISPR"
+        },
+        {
+          "href": "histoire.html",
+          "label": "Chronologie"
+        },
+        {
+          "href": "glossaire.html",
+          "label": "Glossaire"
+        }
+      ]
+    },
+    {
+      "label": "Applications",
+      "items": [
+        {
+          "href": "applications.html",
+          "label": "Panorama"
+        },
+        {
+          "href": "therapies.html",
+          "label": "Thérapies"
+        },
+        {
+          "href": "limites.html",
+          "label": "Limites & risques"
+        }
+      ]
+    },
+    {
+      "href": "ethique.html",
+      "label": "Éthique & droit"
+    },
+    {
+      "href": "videos.html",
+      "label": "Vidéos"
+    },
+    {
+      "href": "blog/",
+      "label": "Le journal"
+    }
+  ],
+  "categories": [
+    {
+      "id": "fondamentaux",
+      "label": "Fondamentaux"
+    },
+    {
+      "id": "sante",
+      "label": "Santé"
+    },
+    {
+      "id": "societe",
+      "label": "Société & éthique"
+    },
+    {
+      "id": "histoire",
+      "label": "Histoire & acteurs"
+    },
+    {
+      "id": "recherche",
+      "label": "ADN & recherche"
+    }
+  ],
+  "videos": [
+    {
+      "id": "RplWR12npqM",
+      "channel": "Inserm",
+      "cat": "fondamentaux",
+      "title": "CRISPR/Cas9 : une méthode révolutionnaire",
+      "desc": "L’institut français de recherche médicale explique en quelques minutes ce que change l’arrivée de Cas9 programmable : cibler, couper, réparer. Bon point de départ pour le vocabulaire."
+    },
+    {
+      "id": "lW64Y18tbUQ",
+      "channel": "Biochimie Facile",
+      "cat": "fondamentaux",
+      "title": "CRISPR-Cas9 : définitions, principe et applications (Prix Nobel de chimie 2020)",
+      "desc": "Un cours structuré, orienté étudiants : composants du système, rôle du PAM, mécanismes de réparation et panorama des applications. Utile pour réviser avec un plan clair."
+    },
+    {
+      "id": "vVZkQAKN8TQ",
+      "channel": "Le HuffPost",
+      "cat": "fondamentaux",
+      "title": "Crispr-Cas9, une méthode révolutionnaire pour faire évoluer la génétique",
+      "desc": "Format court et pédagogique : comment des « ciseaux moléculaires » ont transformé la recherche en biologie, et pourquoi les scientifiques parlent d’un avant et d’un après 2012."
+    },
+    {
+      "id": "_-IuPn0IUAU",
+      "channel": "Le Blob",
+      "cat": "sante",
+      "title": "CRISPR-Cas9 : découper l’ADN pour lutter contre les maladies rares (reportage)",
+      "desc": "Reportage de terrain dans des laboratoires français : ce que signifie concrètement corriger une mutation, et à quelles étapes de développement se heurtent les projets de thérapie."
+    },
+    {
+      "id": "YWlsthIbSoQ",
+      "channel": "Université de Tours",
+      "cat": "sante",
+      "title": "Les mots de la génétique : la thérapie génique",
+      "desc": "Mise au point sur la thérapie génique : apporter un gène correcteur, ou modifier un gène existant. Aide à situer CRISPR parmi les autres approches de correction du génome."
+    },
+    {
+      "id": "hWInN83Ems0",
+      "channel": "ARTE",
+      "cat": "societe",
+      "title": "Modification du génome humain — Les questions qui fâchent",
+      "desc": "Émission de débats : où s’arrête le soin, où commence l’amélioration ? Utile pour comprendre pourquoi la frontière entre cellules du corps et cellules transmissibles structure tout le débat."
+    },
+    {
+      "id": "4MiN_QNXS78",
+      "channel": "Le Monde",
+      "cat": "societe",
+      "title": "Notre génome manipulé ? La révolution Crispr expliquée",
+      "desc": "Vidéo d’explication grand public avec mise en perspective journalistique : promesses, limites et controverses, sans jargon excessif."
+    },
+    {
+      "id": "3L-YJDxi2n0",
+      "channel": "wocomoFRANÇAIS",
+      "cat": "societe",
+      "title": "Bientôt une humanité sur mesure ? La révolution moléculaire de CRISPR-Cas9 et ses questions éthiques",
+      "desc": "Documentaire en français consacré aux enjeux éthiques : sélection, dignité, gouvernance internationale et risque de dérive eugénique."
+    },
+    {
+      "id": "cYAaHJ9WUXs",
+      "channel": "DirtyBiology",
+      "cat": "societe",
+      "title": "L’eugénisme à la cool du futur — DBY #63",
+      "desc": "Vulgarisation critique : comment des technologies présentées comme bienveillantes peuvent glisser vers des logiques de sélection. À regarder avec l’esprit d’alerte qu’il propose."
+    },
+    {
+      "id": "Vnz_wvqicAc",
+      "channel": "Le Point",
+      "cat": "histoire",
+      "title": "Emmanuelle Charpentier, un Nobel pour ses ciseaux révolutionnaires",
+      "desc": "Portrait de la microbiologiste française co-lauréate du prix Nobel de chimie 2020, et retour sur le chemin de recherche qui mène des bactéries au laboratoire de génétique."
+    },
+    {
+      "id": "M1U8zkYX1II",
+      "channel": "CNRS",
+      "cat": "recherche",
+      "title": "L’ADN peut-il révolutionner la cryptographie ? (reportage CNRS)",
+      "desc": "Détour par une autre utilisation de l’ADN comme support d’information : utile pour se rappeler que lire et écrire dans l’ADN ne servent pas qu’à soigner."
+    },
+    {
+      "id": "L1a0EMfENqQ",
+      "channel": "CNRS",
+      "cat": "recherche",
+      "title": "Recherche à risque : au cœur de la science qui ose",
+      "desc": "Sur la manière dont les institutions encadrent les recherches potentiellement sensibles. Éclaire la question de la gouvernance des technologies d’édition."
+    }
+  ],
+  "pages": [
+    {
+      "file": "index.html",
+      "body": "accueil.html",
+      "active": "index.html",
+      "topline": "Lire, cibler, comprendre",
+      "og_type": "website",
+      "title": "CRISPR-Cas9 expliqué en français — mécanismes, thérapies, limites et éthique",
+      "description": "Comprendre CRISPR-Cas9 sans simplisme : le mécanisme, la famille d’outils, les applications réelles, les thérapies autorisées, les limites documentées et le cadre juridique en France et en Europe.",
+      "extra_body": "  <script src=\"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js\"></script>\n  <script src=\"assets/hero.js\" defer></script>",
+      "extra_head": "<meta name=\"keywords\" content=\"CRISPR, Cas9, édition génomique, édition du génome, ARN guide, Casgevy, thérapie génique, expliqué en français\">"
+    },
+    {
+      "file": "comprendre.html",
+      "body": "comprendre.html",
+      "active": "comprendre.html",
+      "topline": "Repères pour débuter",
+      "og_type": "article",
+      "title": "Comprendre CRISPR-Cas9 : les bases sans simplisme — CRISPR·CAS9",
+      "description": "Qu’est-ce que CRISPR-Cas9 ? Vocabulaire, analogies et limites des analogies, ce que l’outil fait réellement et ce qu’il ne fait pas."
+    },
+    {
+      "file": "mecanisme.html",
+      "body": "mecanisme.html",
+      "active": "mecanisme.html",
+      "topline": "Du PAM à la réparation",
+      "og_type": "article",
+      "title": "Le mécanisme de CRISPR-Cas9, étape par étape — CRISPR·CAS9",
+      "description": "Reconnaissance du PAM, R-loop, coupure par les domaines HNH et RuvC, réparation NHEJ ou HDR : le détail moléculaire et ce qui détermine l’efficacité."
+    },
+    {
+      "file": "outils.html",
+      "body": "outils.html",
+      "active": "outils.html",
+      "topline": "Au-delà de Cas9",
+      "og_type": "article",
+      "title": "La famille CRISPR : Cas9, Cas12, Cas13, éditeurs de bases et prime editing — CRISPR·CAS9",
+      "description": "Cas9 n’est qu’un outil parmi d’autres. Comparatif des nucléases, nickases, dCas9, éditeurs de bases et prime editing, avec ce que chacun permet et coûte."
+    },
+    {
+      "file": "histoire.html",
+      "body": "histoire.html",
+      "active": "histoire.html",
+      "topline": "1987 → 2026",
+      "og_type": "article",
+      "title": "Chronologie de CRISPR : des répétitions bactériennes au Nobel — CRISPR·CAS9",
+      "description": "De la découverte de séquences répétées chez E. coli en 1987 au prix Nobel 2020 et aux premières thérapies autorisées : la chronologie documentée, étape par étape."
+    },
+    {
+      "file": "applications.html",
+      "body": "applications.html",
+      "active": "applications.html",
+      "topline": "Promesses et état réel",
+      "og_type": "article",
+      "title": "Applications de CRISPR : santé, agriculture, recherche, diagnostic — CRISPR·CAS9",
+      "description": "Panorama honnête des usages de l’édition génomique, avec le statut réel de chaque domaine : recherche, essai clinique ou usage autorisé."
+    },
+    {
+      "file": "therapies.html",
+      "body": "therapies.html",
+      "active": "therapies.html",
+      "topline": "Ce qui est autorisé, ce qui reste expérimental",
+      "og_type": "article",
+      "title": "Thérapies issues de CRISPR : Casgevy, essais cliniques et accès en France — CRISPR·CAS9",
+      "description": "La première thérapie issue de l’édition génomique autorisée, son fonctionnement, ses contraintes, son statut en France, et le paysage des essais cliniques."
+    },
+    {
+      "file": "limites.html",
+      "body": "limites.html",
+      "active": "limites.html",
+      "topline": "Ce que la science ne sait pas encore",
+      "og_type": "article",
+      "title": "Limites et risques de CRISPR : effets hors cible, mosaïcisme, délivrance — CRISPR·CAS9",
+      "description": "Effets hors cible et leur mesure, mosaïcisme, réponse p53, immunogénicité, réarrangements chromosomiques : ce que la recherche sait, ignore ou discute."
+    },
+    {
+      "file": "ethique.html",
+      "body": "ethique.html",
+      "active": "ethique.html",
+      "topline": "Lignée germinale : la ligne rouge",
+      "og_type": "article",
+      "title": "Éthique et droit de l’édition génomique : bébés CRISPR, CCNE, loi française, UE — CRISPR·CAS9",
+      "description": "Somatique contre lignée germinale, affaire He Jiankui, avis du CCNE, article 16-4 du code civil, convention d’Oviedo et règlement européen sur les plantes : le cadre documenté."
+    },
+    {
+      "file": "videos.html",
+      "body": "videos.html",
+      "active": "videos.html",
+      "topline": "Expliqué en images",
+      "og_type": "website",
+      "title": "Vidéos en français sur CRISPR-Cas9 : sélection commentée — CRISPR·CAS9",
+      "description": "Douze vidéos francophones vérifiées (Inserm, CNRS, ARTE, Le Monde, Le Blob…) classées par thème, avec une note de lecture pour chacune."
+    },
+    {
+      "file": "glossaire.html",
+      "body": "glossaire.html",
+      "active": "glossaire.html",
+      "topline": "Du jargon au français clair",
+      "og_type": "website",
+      "title": "Glossaire CRISPR-Cas9 : 60 termes définis simplement — CRISPR·CAS9",
+      "description": "ARN guide, PAM, NHEJ, HDR, prime editing, mosaïcisme, lignée germinale… toutes les notions utiles, définies en français accessible et reliées entre elles."
+    },
+    {
+      "file": "ressources.html",
+      "body": "ressources.html",
+      "active": "ressources.html",
+      "topline": "Vérifier par soi-même",
+      "og_type": "website",
+      "title": "Sources fiables sur CRISPR : institutions, bases de données, lectures — CRISPR·CAS9",
+      "description": "Où vérifier une affirmation sur l’édition génomique : institutions françaises et européennes, bases de données d’essais cliniques, publications fondatrices."
+    },
+    {
+      "file": "a-propos.html",
+      "body": "a-propos.html",
+      "active": "a-propos.html",
+      "topline": "Transparence",
+      "og_type": "website",
+      "title": "À propos et méthode éditoriale — CRISPR·CAS9",
+      "description": "Qui écrit, comment les faits sont vérifiés, quelles sources sont privilégiées, et comment nous signalerons tout lien affilié ou contenu sponsorisé."
+    },
+    {
+      "file": "404.html",
+      "body": "404.html",
+      "active": "",
+      "topline": "Page introuvable",
+      "og_type": "website",
+      "title": "Page introuvable — CRISPR·CAS9",
+      "description": "La page demandée n’existe pas ou a été déplacée."
+    }
+  ],
+  "articles": [
+    {
+      "slug": "casgevy-premiere-therapie-crispr",
+      "date": "2026-09-26",
+      "tag": "Thérapies",
+      "title": "Casgevy : anatomie de la première thérapie issue de CRISPR",
+      "lead": "Autorisée en 2023 au Royaume-Uni et aux États-Unis, puis dans l’Union européenne en février 2024, Casgevy est la première thérapie reposant sur l’édition génomique. Ce qu’elle corrige, comment, et ce qu’elle coûte réellement aux patients."
+    },
+    {
+      "slug": "plantes-ngt-reglement-ue-2026",
+      "date": "2026-09-26",
+      "tag": "Agriculture & droit",
+      "title": "Plantes éditées : ce que change le règlement européen 2026/1388",
+      "lead": "L’Union européenne a adopté en juin 2026 un cadre qui traite différemment deux catégories de plantes issues de nouvelles techniques génomiques. Décryptage d’une réforme qui s’appliquera à partir de juillet 2028."
+    },
+    {
+      "slug": "effets-hors-cible-comment-on-mesure",
+      "date": "2026-09-26",
+      "tag": "Méthode",
+      "title": "Effets hors cible : comment mesure-t-on la précision d’une édition ?",
+      "lead": "« C’est précis » ne veut rien dire sans méthode de mesure. Tour d’horizon des techniques utilisées pour détecter les modifications non voulues, et de ce qu’elles laissent passer."
+    },
+    {
+      "slug": "bebes-crispr-2018-ce-qui-a-change",
+      "date": "2026-09-26",
+      "tag": "Éthique",
+      "title": "Bébés CRISPR : ce qui s’est passé en 2018, et ce qui a changé depuis",
+      "lead": "En novembre 2018, la naissance de deux jumelles dont le génome avait été modifié était annoncée en Chine. Retour sur les faits établis, la condamnation, et les garde-fous mis en place — ou non."
+    }
+  ]
+}

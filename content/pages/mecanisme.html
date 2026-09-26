@@ -1,0 +1,126 @@
+    <section class="pagehero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d’Ariane"><a href="{{BASE}}index.html">Accueil</a> › <a href="{{BASE}}comprendre.html">Comprendre</a> › Le mécanisme</nav>
+        <span class="kicker">Molécules</span>
+        <h1 class="h1">Le mécanisme, étape par étape</h1>
+        <p class="lead">Comment une protéine trouve-t-elle une séquence de vingt bases dans un génome de trois milliards ? Que coupe-t-elle exactement ? Et pourquoi le résultat final dépend-il moins de la protéine que de la cellule ? Voici la chaîne complète.</p>
+        <div class="pagemeta"><span>Lecture ~11 min</span><span>Niveau : intermédiaire</span><span>Schémas simplifiés</span></div>
+      </div>
+    </section>
+
+    <div class="wrap doc">
+      <article class="prose">
+        <p class="h-intro">Le système utilisé en laboratoire tient en deux molécules : une protéine, Cas9, et un ARN guide. Toute la sophistication du mécanisme est dans leur interaction, et toute la complexité des résultats est dans la réponse de la cellule.</p>
+
+        <h2 id="composants">1. Les composants : deux molécules, un complexe</h2>
+        <p>Dans la bactérie d’origine, <em>Streptococcus pyogenes</em>, le système fonctionne avec deux ARN distincts : un ARN CRISPR (crRNA), qui contient la séquence de reconnaissance, et un ARN trans-activateur (tracrRNA), qui sert à la maturation et à l’assemblage. En 2012, l’équipe de Charpentier et Doudna montre qu’on peut fusionner ces deux ARN en une seule molécule chimère : l’ARN guide unique, souvent abrégé sgRNA.</p>
+        <p>La séquence guide comporte environ vingt nucléotides complémentaires de la cible. C’est cette portion qui détermine où le complexe se fixe. La protéine, elle, apporte l’activité catalytique et la capacité à ouvrir l’ADN double brin.</p>
+
+        <div class="diagram">
+          <div class="strandlabel">Cible d’ADN — brin portant le motif PAM</div>
+          <div class="strand">A T G <b>C</b> <b>G</b> <b>A</b> C T T G A C <span style="color:#6f8f4a">[N G G]</span></div>
+          <div class="cut" aria-hidden="true"></div>
+          <div class="strand">T A C G C T G A A C T G</div>
+          <div class="strandlabel">La coupure intervient environ trois paires de bases en amont du motif PAM</div>
+          <div class="strandlabel" style="margin-top:8px">Schéma pédagogique — échelle et orientation simplifiées</div>
+        </div>
+
+        <h2 id="pam">2. Premier filtre : la reconnaissance du PAM</h2>
+        <p>Cas9 ne « lit » pas l’ADN au hasard. Elle cherche d’abord un motif très court appelé PAM (protospacer adjacent motif). Pour l’enzyme la plus utilisée en laboratoire, ce motif est 5’-NGG-3’, où N désigne n’importe quelle base. Cette contrainte de quelques bases est ce qui limite les sites éditables : la cible doit se trouver juste à côté d’un PAM.</p>
+        <p>Le PAM joue un rôle de contrôle : il signale à l’enzyme un site potentiellement légitime. C’est aussi une des raisons pour lesquelles les systèmes CRISPR bactériens ne se retournent pas contre leurs propres archives génomiques — un mécanisme d’auto-évitement qui a occupé la recherche pendant plusieurs années.</p>
+
+        <h2 id="rloop">3. Deuxième étape : ouvrir l’hélice</h2>
+        <p>Une fois un PAM reconnu, l’enzyme déstabilise localement la double hélice et permet à l’ARN guide de s’apparier avec le brin complémentaire. Il se forme une structure en boucle de déplacement, ou R-loop : l’ARN guide occupe la place d’un brin, qui se retrouve écarté.</p>
+        <p>L’appariement se propage depuis le PAM vers l’extrémité distante. C’est un processus progressif : la fixation n’est pas binaire, et une correspondance incomplète peut suffire à engager la coupure. Ce point est central pour comprendre les effets hors cible : la reconnaissance tolère des erreurs, notamment sur la partie de la séquence la plus éloignée du PAM.</p>
+
+        <h2 id="coupure">4. Troisième étape : la coupure</h2>
+        <p>Cas9 possède deux domaines catalytiques distincts. Le domaine HNH coupe le brin apparié à l’ARN guide ; le domaine RuvC coupe le brin opposé. Le résultat est une cassure double brin franche, avec des extrémités nettes, située à environ trois paires de bases en amont du PAM.</p>
+        <p>Deux conséquences pratiques méritent d’être retenues. Premièrement, on peut inactiver sélectivement un seul des deux domaines : l’enzyme devient une nickase, qui coupe un seul brin. Deuxièmement, on peut inactiver les deux : la protéine reste capable de se fixer à la cible — ce qui permet de l’utiliser comme plateforme d’adressage sans couper, par exemple pour activer ou réprimer un gène.</p>
+
+        <h2 id="reparation">5. Quatrième étape : la réparation, qui décide du résultat</h2>
+        <p>Une cassure double brin est un dommage grave pour une cellule. Elle mobilise immédiatement une machinerie de réparation, et c’est ce choix de machinerie qui détermine le type de modification obtenue. C’est ici que la plupart des malentendus se forment.</p>
+        <div class="tablewrap">
+          <table>
+            <caption>Les deux voies de réparation, et ce qu’elles produisent</caption>
+            <thead><tr><th scope="col">Voie</th><th scope="col">Principe</th><th scope="col">Résultat typique</th><th scope="col">Usage</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>NHEJ</strong><br><span class="small">jonction d’extrémités non homologues</span></td>
+                <td>La cellule recolle les deux extrémités sans modèle de référence. Le collage est approximatif et laisse souvent de petites insertions ou délétions.</td>
+                <td>Insertions ou délétions de quelques bases, ou décalage du cadre de lecture.</td>
+                <td>Invalider un gène : c’est la voie majoritaire chez les cellules de mammifères, donc la plus prévisible en pratique.</td>
+              </tr>
+              <tr>
+                <td><strong>HDR</strong><br><span class="small">réparation dirigée par homologie</span></td>
+                <td>La cellule recopie une séquence modèle fournie par l’expérimentateur pour réparer proprement la coupure.</td>
+                <td>Modification précise : correction d’une mutation, insertion d’une séquence définie.</td>
+                <td>Corriger ou insérer. Beaucoup moins efficace, car cette voie n’est active que dans certaines phases du cycle cellulaire.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout warn"><strong>Point clé</strong>Obtenir une correction précise suppose que la cellule choisisse la voie de réparation la plus rare. C’est pourquoi les stratégies modernes cherchent souvent à éviter la cassure double brin : éditeurs de bases, prime editing, ou nickases appariées.</div>
+
+        <h2 id="efficacite">6. Ce qui détermine l’efficacité</h2>
+        <p>Deux laboratoires peuvent viser la même séquence et obtenir des résultats très différents. Les facteurs connus se répartissent en trois familles.</p>
+        <ul>
+          <li><strong>La cible elle-même.</strong> Accessibilité dans la chromatine, composition en bases du guide, proximité du PAM, structures secondaires de l’ADN. Une région condensée du génome se laisse moins facilement atteindre.</li>
+          <li><strong>L’état de la cellule.</strong> Type cellulaire, phase du cycle, capacité de réparation. Une cellule en division répare différemment d’une cellule quiescente.</li>
+          <li><strong>La façon de livrer l’outil.</strong> Quantité, durée d’exposition et forme moléculaire : protéine déjà assemblée, ARN messager, ou séquence portée par un vecteur viral.</li>
+        </ul>
+
+        <h2 id="livraison">7. Livrer l’outil : le vrai goulot d’étranglement</h2>
+        <p>Faire fonctionner une édition dans des cellules en culture est une chose. L’obtenir dans un organe, chez un patient, en est une autre. Les modalités de délivrance structurent aujourd’hui l’essentiel des projets thérapeutiques.</p>
+        <div class="tablewrap">
+          <table>
+            <caption>Principales modalités de délivrance</caption>
+            <thead><tr><th scope="col">Modalité</th><th scope="col">Principe</th><th scope="col">Contexte typique</th><th scope="col">Limite principale</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Complexe protéine-ARN</strong></td><td>La protéine Cas9 est assemblée avec son guide avant introduction, souvent par choc électrique.</td><td>Cellules prélevées puis réinjectées : approche dite <em>ex vivo</em>.</td><td>Nécessite de sortir les cellules du patient.</td></tr>
+              <tr><td><strong>ARN messager + nanoparticules lipidiques</strong></td><td>La cellule fabrique elle-même la protéine à partir d’un ARN encapsulé.</td><td>Administration directe, notamment vers le foie.</td><td>Expression transitoire ; ciblage limité à certains tissus.</td></tr>
+              <tr><td><strong>Vecteur viral (AAV)</strong></td><td>Un virus inoffensif transporte le matériel génétique jusqu’à la cellule cible.</td><td>Tissus difficiles à atteindre : œil, muscle, système nerveux.</td><td>Capacité d’insertion réduite et réponse immunitaire possible.</td></tr>
+              <tr><td><strong>Plasmide ou ADN</strong></td><td>Un anneau d’ADN porte les instructions nécessaires.</td><td>Recherche, cellules en culture.</td><td>Expression prolongée, donc exposition plus longue aux effets indésirables.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="pratique">8. Ce que ce mécanisme implique en pratique</h2>
+        <p>Trois conclusions se dégagent de la description ci-dessus, et elles reviennent dans tous les chapitres suivants du site.</p>
+        <ol>
+          <li><strong>La spécificité n’est pas binaire.</strong> Un guide peut reconnaître des séquences proches. La question n’est donc pas « est-ce spécifique ? » mais « à quel taux, et cela a-t-il une conséquence ? ».</li>
+          <li><strong>Le résultat dépend du contexte cellulaire.</strong> Deux tissus, deux âges, deux états de division : deux issues possibles pour la même coupure.</li>
+          <li><strong>La délivrance est un sujet scientifique à part entière.</strong> Beaucoup d’échecs attribués à CRISPR sont en réalité des échecs de ciblage ou d’acheminement.</li>
+        </ol>
+        <div class="callout ok"><strong>À retenir</strong>Cas9 apporte la reconnaissance et la coupure. La cellule apporte le résultat. Toute description du mécanisme qui omet la réparation décrit au mieux la moitié du système.</div>
+      </article>
+
+      <aside class="toc">
+        <h2>Sur cette page</h2>
+        <ol>
+          <li><a href="#composants">Les composants</a></li>
+          <li><a href="#pam">La reconnaissance du PAM</a></li>
+          <li><a href="#rloop">Ouvrir l’hélice</a></li>
+          <li><a href="#coupure">La coupure</a></li>
+          <li><a href="#reparation">La réparation</a></li>
+          <li><a href="#efficacite">Ce qui fait l’efficacité</a></li>
+          <li><a href="#livraison">La délivrance</a></li>
+          <li><a href="#pratique">Conséquences pratiques</a></li>
+        </ol>
+        <a class="totop" href="#contenu">↑ Haut de page</a>
+      </aside>
+    </div>
+
+    <section class="section alt">
+      <div class="wrap">
+        <span class="kicker">Sources de cette page</span>
+        <h2 class="h2" style="font-size:26px">Publications et ressources de référence</h2>
+        <ol class="sources">
+          <li>Jinek M. <em>et al.</em>, « A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity », <em>Science</em>, 2012 — <a href="https://doi.org/10.1126/science.1225829">doi.org/10.1126/science.1225829</a></li>
+          <li>Garneau J. E. <em>et al.</em>, « The CRISPR/Cas bacterial immune system cleaves bacteriophage and plasmid DNA », <em>Nature</em>, 2010 — <a href="https://doi.org/10.1038/nature09523">doi.org/10.1038/nature09523</a></li>
+          <li>Planet-Vie (ENS Lyon), « Principe de fonctionnement du système CRISPR/Cas9 » — <a href="https://planet-vie.ens.fr/mediatheque/principe-de-fonctionnement-du-systeme-crisprcas9">planet-vie.ens.fr</a></li>
+          <li>Inserm, « Le système CRISPR-Cas », <em>médecine/sciences</em>, 2018 — <a href="https://ipubli.inserm.fr/bitstream/handle/10608/9870/MS_2018_10_813.html">ipubli.inserm.fr</a></li>
+          <li>Komor A. C. <em>et al.</em>, « Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage », <em>Nature</em>, 2016 — <a href="https://doi.org/10.1038/nature17946">doi.org/10.1038/nature17946</a></li>
+          <li>Anzalone A. V. <em>et al.</em>, « Search-and-replace genome editing without double-strand breaks or donor DNA », <em>Nature</em>, 2019 — <a href="https://doi.org/10.1038/s41586-019-1711-4">doi.org/10.1038/s41586-019-1711-4</a></li>
+        </ol>
+      </div>
+    </section>

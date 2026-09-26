@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c31">
+  <title>La famille CRISPR : Cas9, Cas12, Cas13, éditeurs de bases et prime editing — CRISPR·CAS9</title>
+  <meta name="description" content="Cas9 n’est qu’un outil parmi d’autres. Comparatif des nucléases, nickases, dCas9, éditeurs de bases et prime editing, avec ce que chacun permet et coûte.">
+  <link rel="canonical" href="https://floskinou.github.io/crisprcas9/outils.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CRISPR·CAS9">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="La famille CRISPR : Cas9, Cas12, Cas13, éditeurs de bases et prime editing — CRISPR·CAS9">
+  <meta property="og:description" content="Cas9 n’est qu’un outil parmi d’autres. Comparatif des nucléases, nickases, dCas9, éditeurs de bases et prime editing, avec ce que chacun permet et coûte.">
+  <meta property="og:url" content="https://floskinou.github.io/crisprcas9/outils.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La famille CRISPR : Cas9, Cas12, Cas13, éditeurs de bases et prime editing — CRISPR·CAS9">
+  <meta name="twitter:description" content="Cas9 n’est qu’un outil parmi d’autres. Comparatif des nucléases, nickases, dCas9, éditeurs de bases et prime editing, avec ce que chacun permet et coûte.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="topline"><div class="wrap"><span><b>La référence francophone</b> · édition génétique</span><span>Au-delà de Cas9</span></div></div>
+  <header class="sitehead">
+    <div class="wrap sitehead-inner">
+      <a class="brand" href="index.html" aria-label="CRISPR Cas9, accueil"><span class="brandmark" aria-hidden="true"></span><span>CRISPR<span class="dot">·</span>CAS9</span></a>
+      <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav">Menu</button>
+      <nav class="mainnav" id="mainnav" aria-label="Navigation principale"><ul><li class="navitem"><button class="navgrp" type="button" aria-expanded="false">Comprendre</button><ul class="navpanel"><li><a href="comprendre.html">Les bases</a></li><li><a href="mecanisme.html">Le mécanisme</a></li><li><a href="outils.html" aria-current="page">La famille CRISPR</a></li><li><a href="histoire.html">Chronologie</a></li><li><a href="glossaire.html">Glossaire</a></li></ul></li><li class="navitem"><button class="navgrp" type="button" aria-expanded="false">Applications</button><ul class="navpanel"><li><a href="applications.html">Panorama</a></li><li><a href="therapies.html">Thérapies</a></li><li><a href="limites.html">Limites & risques</a></li></ul></li><li><a href="ethique.html">Éthique & droit</a></li><li><a href="videos.html">Vidéos</a></li><li><a class="navcta" href="blog/">Le journal ↗</a></li></ul></nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="pagehero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a> › <a href="comprendre.html">Comprendre</a> › La famille CRISPR</nav>
+        <span class="kicker">Boîte à outils</span>
+        <h1 class="h1">La famille CRISPR va bien au-delà de Cas9</h1>
+        <p class="lead">« CRISPR » désigne aujourd’hui une famille d’outils très différents. Certains coupent, d’autres non. Certains visent l’ADN, d’autres l’ARN. Savoir lequel fait quoi permet de lire correctement une annonce scientifique — et de repérer les raccourcis abusifs.</p>
+        <div class="pagemeta"><span>Lecture ~10 min</span><span>Niveau : intermédiaire</span><span>Tableau comparatif</span></div>
+      </div>
+    </section>
+
+    <div class="wrap doc">
+      <article class="prose">
+        <p class="h-intro">La question utile n’est jamais « CRISPR, ça marche ? » mais « quel outil, pour quelle modification, dans quel type de cellule ? ». Un éditeur de base qui change une lettre et une nucléase qui casse les deux brins n’ont ni les mêmes usages, ni les mêmes risques.</p>
+
+        <h2 id="couper">1. Les nucléases : celles qui coupent</h2>
+        <p>Ce sont les outils historiques. Elles provoquent une cassure double brin que la cellule répare ensuite.</p>
+        <ul>
+          <li><strong>Cas9</strong> (le plus courant) reconnaît un PAM riche en guanine et produit des extrémités franches. Il existe de nombreux variants issus d’autres bactéries, avec des contraintes de PAM différentes — utile quand la cible souhaitée n’est pas accessible avec l’enzyme standard.</li>
+          <li><strong>Cas12a</strong>, parfois appelée Cpf1, reconnaît un PAM de type différent et produit des extrémités décalées. Elle n’a besoin que d’un seul ARN guide, plus court, ce qui simplifie certaines constructions.</li>
+          <li><strong>Cas13</strong> ne vise pas l’ADN mais l’ARN. Elle ne modifie donc pas le génome : elle détruit des transcrits. C’est l’outil de choix pour les approches de détection et pour l’étude de l’ARN.</li>
+        </ul>
+
+        <h2 id="patcher">2. Les outils qui ne coupent pas : éditeurs de bases</h2>
+        <p>Une cassure double brin est un événement brutal, dont la réparation est partiellement imprévisible. D’où l’idée, apparue en 2016, de modifier une base unique sans casser la molécule.</p>
+        <p>Le principe : on utilise une protéine Cas9 rendue inactive, qui sert uniquement de véhicule, associée à une enzyme capable de transformer chimiquement une base. On parle de conversion de base, avec deux grandes familles : celles qui transforment une cytosine et celles qui transforment une adénine.</p>
+        <div class="callout ok"><strong>Ce que cela change</strong>Pas de cassure, donc moins de risque de réarrangement et un résultat plus homogène. En contrepartie, ces outils ne savent pas faire n’importe quelle modification : ils convertissent certaines bases en d’autres, à proximité du guide, et non « écrire ce qu’on veut ».</div>
+
+        <h2 id="prime">3. Le prime editing : écrire sans casser</h2>
+        <p>Décrit en 2019, le prime editing combine une Cas9 modifiée qui ne coupe qu’un seul brin, une enzyme capable de copier de l’ARN en ADN, et un ARN guide allongé qui contient à la fois l’adresse et le texte à écrire. La cellule recopie alors la nouvelle séquence directement sur place.</p>
+        <p>En théorie, cette approche permet des insertions, des délétions et des substitutions sans cassure double brin. En pratique, son efficacité reste très dépendante de la cible et du type cellulaire, et elle est plus difficile à mettre au point que l’invalidation simple d’un gène. C’est un domaine en évolution rapide.</p>
+
+        <h2 id="sans-couper">4. Utiliser Cas9 comme simple adresse</h2>
+        <p>Si l’on désactive les deux domaines catalytiques, la protéine perd son activité de coupe mais conserve sa capacité à se fixer à une séquence précise, guidée par son ARN. On obtient un outil d’adressage — désigné par le préfixe « d » pour <em>dead</em>.</p>
+        <p>Deux usages en découlent. En fusionnant cette protéine à un répresseur, on éteint un gène sans en modifier la séquence. En la fusionnant à un activateur, on augmente son expression. Ces techniques permettent d’étudier la fonction d’un gène sans introduire de modification permanente de l’ADN — précieux quand une modification permanente serait létale pour la cellule.</p>
+
+        <h2 id="nickase">5. Les nickases et les stratégies à deux guides</h2>
+        <p>Inactiver un seul domaine catalytique transforme Cas9 en nickase : elle ne coupe qu’un brin. Utilisée seule, une nickase ne provoque pas de cassure double brin — utile pour certaines stratégies d’écriture. Utilisée par paires, avec deux guides encadrant la région d’intérêt, elle produit deux coupures simple brin qui augmentent la spécificité : les deux événements doivent se produire au bon endroit pour aboutir à un résultat.</p>
+
+        <h2 id="cribles">6. Les cribles : la face cachée, très utilisée en recherche</h2>
+        <p>Une grande partie des usages de CRISPR n’a rien à voir avec la thérapie. En recherche, on introduit des milliers de guides différents dans une population de cellules, puis on observe quelles cellules survivent à une contrainte. Cette approche, dite crible, permet d’identifier les gènes dont dépend un phénomène : résistance à un médicament, entrée d’un virus, survie dans un environnement donné.</p>
+        <p>Les cribles ont transformé la génétique fonctionnelle, mais leur interprétation demande de la prudence : un effet observé dans une lignée cellulaire ne se transpose pas toujours à un organisme.</p>
+
+        <h2 id="comparatif">7. Tableau comparatif</h2>
+        <div class="tablewrap">
+          <table>
+            <caption>Quel outil pour quel objectif</caption>
+            <thead><tr><th scope="col">Outil</th><th scope="col">Cible</th><th scope="col">Coupe-t-il ?</th><th scope="col">Type de modification</th><th scope="col">Usage principal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cas9 classique</strong></td><td>ADN</td><td class="no">Oui, double brin</td><td>Insertions ou délétions, ou insertion dirigée</td><td>Invalider ou corriger un gène en recherche et en thérapie <em>ex vivo</em></td></tr>
+              <tr><td><strong>Cas12a</strong></td><td>ADN</td><td class="no">Oui, décalée</td><td>Insertions ou délétions</td><td>Alternative à Cas9, notamment pour la détection</td></tr>
+              <tr><td><strong>Cas13</strong></td><td>ARN</td><td class="no">Oui, sur l’ARN</td><td>Destruction du transcrit</td><td>Détection, étude de l’ARN ; ne modifie pas le génome</td></tr>
+              <tr><td><strong>Nickase</strong></td><td>ADN</td><td class="mid">Un seul brin</td><td>Bris simple brin</td><td>Stratégies d’écriture, paires de guides pour plus de spécificité</td></tr>
+              <tr><td><strong>dCas9</strong></td><td>ADN</td><td class="yes">Non</td><td>Aucune : simple adressage</td><td>Activer ou réprimer un gène sans le modifier</td></tr>
+              <tr><td><strong>Éditeur de base</strong></td><td>ADN</td><td class="yes">Non</td><td>Conversion d’une base en une autre</td><td>Corriger une mutation ponctuelle précise</td></tr>
+              <tr><td><strong>Prime editing</strong></td><td>ADN</td><td class="yes">Non (ou un seul brin)</td><td>Substitution, insertion, délétion courtes</td><td>Écriture de séquence sans cassure double brin</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="choisir">8. Comment on choisit un outil</h2>
+        <p>La décision se prend en fonction de la modification visée, pas par préférence technologique. Corriger une mutation ponctuelle qui tombe dans la fenêtre d’un éditeur de base est souvent plus simple et plus sûr qu’une insertion par réparation dirigée. Invalider un gène reste l’opération la plus robuste, et c’est pour cela que de nombreuses approches thérapeutiques ne cherchent pas à corriger la mutation elle-même, mais à modifier une régulation : c’est le cas de la première thérapie autorisée, décrite sur la page consacrée aux traitements.</p>
+        <div class="callout"><strong>Réflexe de lecture</strong>Quand un article annonce une « correction » par CRISPR, cherchez ces trois informations : la modification exacte, la méthode de mesure, et le type cellulaire concerné. En l’absence de ces trois éléments, vous ne pouvez pas évaluer la portée de l’annonce.</div>
+      </article>
+
+      <aside class="toc">
+        <h2>Sur cette page</h2>
+        <ol>
+          <li><a href="#couper">Les nucléases</a></li>
+          <li><a href="#patcher">Éditeurs de bases</a></li>
+          <li><a href="#prime">Prime editing</a></li>
+          <li><a href="#sans-couper">Cas9 comme adresse</a></li>
+          <li><a href="#nickase">Nickases</a></li>
+          <li><a href="#cribles">Cribles génétiques</a></li>
+          <li><a href="#comparatif">Tableau comparatif</a></li>
+          <li><a href="#choisir">Choisir un outil</a></li>
+        </ol>
+        <a class="totop" href="#contenu">↑ Haut de page</a>
+      </aside>
+    </div>
+
+    <section class="section alt">
+      <div class="wrap">
+        <span class="kicker">Sources de cette page</span>
+        <h2 class="h2" style="font-size:26px">Publications fondatrices</h2>
+        <ol class="sources">
+          <li>Zetsche B. <em>et al.</em>, « Cpf1 is a single RNA-guided endonuclease of a class 2 CRISPR-Cas system », <em>Cell</em>, 2015 — <a href="https://doi.org/10.1016/j.cell.2015.09.038">doi.org/10.1016/j.cell.2015.09.038</a></li>
+          <li>Abudayyeh O. O. <em>et al.</em>, « C2c2 is a single-component programmable RNA-guided RNA-targeting CRISPR effector », <em>Science</em>, 2016 — <a href="https://doi.org/10.1126/science.aaf5573">doi.org/10.1126/science.aaf5573</a></li>
+          <li>Komor A. C. <em>et al.</em>, « Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage », <em>Nature</em>, 2016 — <a href="https://doi.org/10.1038/nature17946">doi.org/10.1038/nature17946</a></li>
+          <li>Gaudelli N. M. <em>et al.</em>, « Programmable base editing of A•T to G•C in genomic DNA without DNA cleavage », <em>Nature</em>, 2017 — <a href="https://doi.org/10.1038/nature24644">doi.org/10.1038/nature24644</a></li>
+          <li>Anzalone A. V. <em>et al.</em>, « Search-and-replace genome editing without double-strand breaks or donor DNA », <em>Nature</em>, 2019 — <a href="https://doi.org/10.1038/s41586-019-1711-4">doi.org/10.1038/s41586-019-1711-4</a></li>
+          <li>Qi L. S. <em>et al.</em>, « Repurposing CRISPR as an RNA-guided platform for sequence-specific control of gene expression », <em>Cell</em>, 2013 — <a href="https://doi.org/10.1016/j.cell.2013.02.022">doi.org/10.1016/j.cell.2013.02.022</a></li>
+          <li>Gootenberg J. S. <em>et al.</em>, « Nucleic acid detection with CRISPR-Cas13a/C2c2 », <em>Science</em>, 2017 — <a href="https://doi.org/10.1126/science.aam9321">doi.org/10.1126/science.aam9321</a></li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+  <footer class="sitefoot">
+    <div class="wrap">
+      <div class="foot-cols">
+        <div class="foot-about">
+          <div class="foot-brand">CRISPR·CAS9</div>
+          <p>Un projet éditorial indépendant pour expliquer l’édition génétique en français : mécanismes, applications réelles, limites documentées et enjeux éthiques. Chaque affirmation factuelle renvoie à une source vérifiable.</p>
+          <p class="foot-note">Contenu informatif et pédagogique. Il ne constitue ni un avis médical, ni une recommandation de traitement.</p>
+        </div>
+        <nav class="foot-nav" aria-label="Plan du site">
+          <div><h2>Comprendre</h2><ul>
+            <li><a href="comprendre.html">Les bases</a></li>
+            <li><a href="mecanisme.html">Le mécanisme</a></li>
+            <li><a href="outils.html">La famille CRISPR</a></li>
+            <li><a href="histoire.html">Chronologie</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+          </ul></div>
+          <div><h2>Applications</h2><ul>
+            <li><a href="applications.html">Panorama</a></li>
+            <li><a href="therapies.html">Thérapies</a></li>
+            <li><a href="limites.html">Limites &amp; risques</a></li>
+            <li><a href="ethique.html">Éthique &amp; droit</a></li>
+          </ul></div>
+          <div><h2>Ressources</h2><ul>
+            <li><a href="videos.html">Vidéos en français</a></li>
+            <li><a href="ressources.html">Sources fiables</a></li>
+            <li><a href="blog/">Le journal</a></li>
+            <li><a href="a-propos.html">À propos &amp; méthode</a></li>
+          </ul></div>
+        </nav>
+      </div>
+      <div class="footnote">
+        <span>© 2026 CRISPR·CAS9 — projet indépendant. Vidéos et marques citées appartiennent à leurs auteurs respectifs.</span>
+        <span><a href="a-propos.html">Transparence éditoriale</a> · <a href="ressources.html">Sources</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+  
+</body>
+</html>

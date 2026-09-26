@@ -1,0 +1,96 @@
+    <section class="pagehero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d’Ariane"><a href="{{BASE}}index.html">Accueil</a> › <a href="{{BASE}}applications.html">Applications</a> › Limites &amp; risques</nav>
+        <span class="kicker">Ce qu’on ne sait pas encore</span>
+        <h1 class="h1">Limites et risques : la partie que les annonces oublient</h1>
+        <p class="lead">La précision d’un outil n’est pas une garantie de sécurité. Effets hors cible, mosaïcisme, réaction de la cellule au dommage, réponse immunitaire, réarrangements chromosomiques : voici l’état documenté des incertitudes, sans minimiser ni dramatiser.</p>
+        <div class="pagemeta"><span>Lecture ~12 min</span><span>Niveau : intermédiaire</span><span>Sources scientifiques en bas de page</span></div>
+      </div>
+    </section>
+
+    <div class="wrap doc">
+      <article class="prose">
+        <p class="h-intro">Un principe gouverne cette page : distinguer ce qui est mesuré, ce qui est discuté, et ce qui est inconnu. Les trois catégories n’appellent pas les mêmes conclusions. Un effet secondaire observé à faible fréquence en laboratoire ne condamne pas une thérapie ; son absence d’étude ne la valide pas non plus.</p>
+
+        <h2 id="hors-cible">1. Les effets hors cible, et comment on les mesure</h2>
+        <p>Un ARN guide est conçu pour une séquence donnée, mais la reconnaissance de l’ADN tolère des erreurs, en particulier sur la partie de la séquence éloignée du motif PAM. Il peut donc y avoir des coupures à des endroits non prévus. Trois paramètres déterminent la gravité potentielle : le nombre de sites concernés, la fréquence de l’événement, et ce que ces sites deviennent dans la cellule.</p>
+        <p>La mesure est un domaine à part entière, car chaque méthode a un angle mort :</p>
+        <ul>
+          <li><strong>Approches par séquençage de sites marqués</strong> — on marque les cassures réelles dans les cellules vivantes, puis on les localise. Elles détectent ce qui se passe dans le contexte cellulaire étudié, mais seulement dans ce contexte.</li>
+          <li><strong>Approches par digestion de l’ADN en tube</strong> — on recherche <em>in vitro</em> toutes les séquences qu’un guide pourrait couper. Très large spectre, mais sans les contraintes de la cellule réelle.</li>
+          <li><strong>Séquençage complet du génome</strong> — la seule méthode capable de repérer des événements structurels, au prix d’une sensibilité qui dépend de la profondeur de lecture.</li>
+          <li><strong>Approches par protéine marquée</strong> — on suit la position de l’enzyme pour cartographier ses sites de fixation.</li>
+        </ul>
+        <div class="callout warn"><strong>Piège fréquent</strong>« Aucun effet hors cible détecté » signifie « aucune méthode employée n’en a détecté ». La conclusion dépend entièrement de la méthode, de la sensibilité et du type cellulaire. C’est pour cela qu’une publication sérieuse décrit toujours sa procédure de détection.</div>
+
+        <h2 id="reponse">2. La réponse de la cellule au dommage</h2>
+        <p>Une coupure double brin active les mécanismes de surveillance du génome. Deux travaux publiés en 2018 ont montré, dans des cellules souches pluripotentes humaines, que l’efficacité de l’édition est liée à l’état de cette réponse : les cellules qui réagissent le plus fortement à la cassure ont tendance à moins survivre à l’édition. Autrement dit, sélectionner les cellules où l’édition a réussi peut revenir à sélectionner des cellules dont la surveillance du génome est défaillante.</p>
+        <p>Ce constat a suscité des débats méthodologiques légitimes, et il ne signifie pas que les cellules éditées soient dangereuses. Il impose en revanche un contrôle : vérifier l’état de cette voie de surveillance dans les produits cellulaires destinés à un patient.</p>
+
+        <h2 id="mosaicisme">3. Le mosaïcisme</h2>
+        <p>Quand l’édition intervient tôt dans le développement — dans un embryon, par exemple — toutes les cellules issues des divisions suivantes n’héritent pas de la même modification. On obtient un organisme composé de populations cellulaires différentes. Cette hétérogénéité complique l’évaluation : on ne peut pas conclure à partir de quelques cellules prélevées.</p>
+        <p>Dans les approches thérapeutiques actuelles, le mosaïcisme est largement contourné : on travaille sur des cellules prélevées, modifiées puis vérifiées avant réinjection, ou sur un organe cible où l’on mesure l’effet global. Le problème reste central pour toute perspective d’édition à l’étape embryonnaire — l’une des raisons techniques, avec les raisons éthiques, pour lesquelles cette voie n’est pas engagée en clinique.</p>
+
+        <h2 id="rearrangements">4. Réarrangements chromosomiques</h2>
+        <p>La réparation d’une cassure peut, dans certaines circonstances, produire des événements plus complexes qu’une simple insertion ou délétion : perte d’un chromosome entier, réarrangements multiples. Ces observations ont été faites dans des contextes précis, notamment chez l’embryon de souris après édition.</p>
+        <p>Il serait abusif d’en conclure que toute édition provoque de tels événements. Il serait tout aussi abusif de les ignorer : cela justifie l’exigence de contrôles étendus — au-delà du seul site visé — sur les produits cellulaires utilisés en clinique, et c’est l’une des raisons pour lesquelles les approches sans coupure double brin sont activement développées.</p>
+
+        <h2 id="immunite">5. La réponse immunitaire</h2>
+        <p>Les protéines utilisées pour l’édition sont d’origine bactérienne. Or de nombreuses personnes ont été exposées à des bactéries de la même famille, et possèdent donc des défenses immunitaires dirigées contre ces protéines. Des travaux ont mis en évidence la présence de telles réponses chez une partie de la population étudiée.</p>
+        <p>Trois conséquences possibles : une réaction inflammatoire lors de l’administration directe dans l’organisme, une élimination plus rapide de l’outil qui réduit son efficacité, et l’impossibilité de répéter une administration. C’est un argument en faveur des stratégies d’administration unique, et un facteur à prendre en compte dans les essais.</p>
+
+        <h2 id="delivrance">6. La délivrance reste le principal obstacle</h2>
+        <p>Beaucoup de déceptions attribuées à la technologie viennent d’un problème d’acheminement plutôt que de biologie moléculaire. On sait couper une séquence choisie ; on sait beaucoup moins bien amener l’outil uniquement dans les cellules concernées, à la bonne dose, pendant la bonne durée.</p>
+        <p>Une administration qui touche aussi des cellules non ciblées pose une question de sécurité évidente. C’est pourquoi les organes les plus accessibles et les plus homogènes — le foie notamment — ont été privilégiés dans les premiers programmes d’administration directe.</p>
+
+        <h2 id="modeles">7. Les modèles ne sont pas des patients</h2>
+        <p>Une modification efficace dans une lignée cellulaire ne se transpose pas nécessairement à un organisme, et un modèle animal ne reproduit ni la diversité génétique humaine, ni les traitements associés, ni la durée de vie. Cette limite est banale en recherche biomédicale, mais elle est rarement mentionnée quand une expérience spectaculaire est présentée comme une avancée thérapeutique.</p>
+
+        <h2 id="synthese">8. Synthèse des risques</h2>
+        <div class="tablewrap">
+          <table>
+            <caption>Niveau de connaissance par type de risque</caption>
+            <thead><tr><th scope="col">Risque</th><th scope="col">Ce qui est établi</th><th scope="col">Ce qui reste ouvert</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Effets hors cible</strong></td><td>Le phénomène existe ; il dépend du guide et du type cellulaire.</td><td>Fidélité des prédictions, seuil de fréquence cliniquement significatif, effets à long terme.</td></tr>
+              <tr><td><strong>Réponse au dommage</strong></td><td>La cassure active la surveillance du génome ; l’efficacité y est liée.</td><td>Conséquences réelles sur les produits cellulaires destinés aux patients.</td></tr>
+              <tr><td><strong>Mosaïcisme</strong></td><td>Documenté lorsque l’édition survient tôt dans le développement.</td><td>Sans objet pour les approches actuelles ; central pour toute voie embryonnaire.</td></tr>
+              <tr><td><strong>Réarrangements</strong></td><td>Observés dans des contextes expérimentaux précis.</td><td>Fréquence et portée selon les tissus et les modalités d’édition.</td></tr>
+              <tr><td><strong>Immunité anti-protéine</strong></td><td>Réponses préexistantes détectées chez une partie de la population.</td><td>Impact clinique selon les voies d’administration et les doses.</td></tr>
+              <tr><td><strong>Effets à très long terme</strong></td><td>Suivi organisé par les agences pour les produits autorisés.</td><td>Tout ce qui dépasse la dizaine d’années : c’est le principal inconnu.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout ok"><strong>Conclusion honnête</strong>L’édition génomique est une technologie dont les effets immédiats sont de mieux en mieux décrits, et dont les effets à long terme restent largement inconnus. Cette asymétrie, plus que tout autre élément, justifie la prudence réglementaire et la lenteur délibérée des autorisations.</div>
+      </article>
+
+      <aside class="toc">
+        <h2>Sur cette page</h2>
+        <ol>
+          <li><a href="#hors-cible">Effets hors cible</a></li>
+          <li><a href="#reponse">Réponse cellulaire</a></li>
+          <li><a href="#mosaicisme">Mosaïcisme</a></li>
+          <li><a href="#rearrangements">Réarrangements</a></li>
+          <li><a href="#immunite">Réponse immunitaire</a></li>
+          <li><a href="#delivrance">Délivrance</a></li>
+          <li><a href="#modeles">Limites des modèles</a></li>
+          <li><a href="#synthese">Synthèse</a></li>
+        </ol>
+        <a class="totop" href="#contenu">↑ Haut de page</a>
+      </aside>
+    </div>
+
+    <section class="section alt">
+      <div class="wrap">
+        <span class="kicker">Sources de cette page</span>
+        <h2 class="h2" style="font-size:26px">Travaux cités</h2>
+        <ol class="sources">
+          <li>Ihry R. J. <em>et al.</em>, « p53 inhibits CRISPR-Cas9 engineering in human pluripotent stem cells », <em>Nature Medicine</em>, 2018 — <a href="https://www.nature.com/articles/s41591-018-0050-6">nature.com/articles/s41591-018-0050-6</a></li>
+          <li>Haapaniemi E. <em>et al.</em>, « CRISPR-Cas9 genome editing induces a p53-mediated DNA damage response », <em>Nature Medicine</em>, 2018 — <a href="https://pubmed.ncbi.nlm.nih.gov/?term=CRISPR-Cas9+genome+editing+induces+a+p53-mediated+DNA+damage+response">référence PubMed</a></li>
+          <li>Charlesworth C. T. <em>et al.</em>, « Identification of preexisting adaptive immunity to Cas9 proteins in humans », <em>Nature Medicine</em>, 2019 — <a href="https://www.nature.com/articles/s41591-018-0326-x">nature.com/articles/s41591-018-0326-x</a></li>
+          <li>« Whole chromosome loss and genomic instability in mouse embryos after CRISPR-Cas9 genome editing », <em>Nature Communications</em>, 2021 — <a href="https://doi.org/10.1038/s41467-021-26097-y">doi.org/10.1038/s41467-021-26097-y</a></li>
+          <li>Planet-Vie (ENS Lyon), principe de fonctionnement du système CRISPR/Cas9 — <a href="https://planet-vie.ens.fr/mediatheque/principe-de-fonctionnement-du-systeme-crisprcas9">planet-vie.ens.fr</a></li>
+          <li>Agence européenne des médicaments, informations sur les médicaments de thérapie génique et leurs exigences de suivi — <a href="https://www.ema.europa.eu/en/human-regulatory-overview/advanced-therapies">ema.europa.eu</a></li>
+        </ol>
+      </div>
+    </section>

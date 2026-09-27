@@ -302,28 +302,32 @@
       "date": "2026-09-26",
       "tag": "Thérapies",
       "title": "Casgevy : anatomie de la première thérapie issue de CRISPR",
-      "lead": "Autorisée en 2023 au Royaume-Uni et aux États-Unis, puis dans l’Union européenne en février 2024, Casgevy est la première thérapie reposant sur l’édition génomique. Ce qu’elle corrige, comment, et ce qu’elle coûte réellement aux patients."
+      "lead": "Autorisée en 2023 au Royaume-Uni et aux États-Unis, puis dans l’Union européenne en février 2024, Casgevy est la première thérapie reposant sur l’édition génomique. Ce qu’elle corrige, comment, et ce qu’elle coûte réellement aux patients.",
+      "minutes": 11
     },
     {
       "slug": "plantes-ngt-reglement-ue-2026",
       "date": "2026-09-26",
       "tag": "Agriculture & droit",
       "title": "Plantes éditées : ce que change le règlement européen 2026/1388",
-      "lead": "L’Union européenne a adopté en juin 2026 un cadre qui traite différemment deux catégories de plantes issues de nouvelles techniques génomiques. Décryptage d’une réforme qui s’appliquera à partir de juillet 2028."
+      "lead": "L’Union européenne a adopté en juin 2026 un cadre qui traite différemment deux catégories de plantes issues de nouvelles techniques génomiques. Décryptage d’une réforme qui s’appliquera à partir de juillet 2028.",
+      "minutes": 10
     },
     {
       "slug": "effets-hors-cible-comment-on-mesure",
       "date": "2026-09-26",
       "tag": "Méthode",
       "title": "Effets hors cible : comment mesure-t-on la précision d’une édition ?",
-      "lead": "« C’est précis » ne veut rien dire sans méthode de mesure. Tour d’horizon des techniques utilisées pour détecter les modifications non voulues, et de ce qu’elles laissent passer."
+      "lead": "« C’est précis » ne veut rien dire sans méthode de mesure. Tour d’horizon des techniques utilisées pour détecter les modifications non voulues, et de ce qu’elles laissent passer.",
+      "minutes": 12
     },
     {
       "slug": "bebes-crispr-2018-ce-qui-a-change",
       "date": "2026-09-26",
       "tag": "Éthique",
       "title": "Bébés CRISPR : ce qui s’est passé en 2018, et ce qui a changé depuis",
-      "lead": "En novembre 2018, la naissance de deux jumelles dont le génome avait été modifié était annoncée en Chine. Retour sur les faits établis, la condamnation, et les garde-fous mis en place — ou non."
+      "lead": "En novembre 2018, la naissance de deux jumelles dont le génome avait été modifié était annoncée en Chine. Retour sur les faits établis, la condamnation, et les garde-fous mis en place — ou non.",
+      "minutes": 11
     }
   ]
 }
